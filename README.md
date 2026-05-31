@@ -112,7 +112,7 @@ cat  cake.txt | python -m pantrypath.cli recipe --have milk,white_vinegar      #
 
 每个替代选项 = 一个**规则节点**，把它的若干"原料食材"（AND）连到"目标食材"；
 口袋食材成本为 0，跑**广义 Dijkstra**：规则在其所有原料都定值后触发，成本 = 规则成本 + Σ 原料成本；
-回溯得到一棵替代树。详见 [`PLAN.md`](./PLAN.md)。
+回溯得到一棵替代树。完整形式化见 [`docs/DESIGN.md`](./docs/DESIGN.md)。
 
 ## 知识库
 
@@ -133,10 +133,12 @@ substitutions:
 pytest -q     # 40 passed
 ```
 
-## 规划与竞品调研
+## 设计与竞品调研
 
-完整的实现规划、算法形式化、数据策略、评估方法与相似项目对比见 **[`PLAN.md`](./PLAN.md)**。
+算法形式化、成本模型、设计取舍与相似项目（GISMo / FlavorGraph / FoodKG）的诚实对比见
+**[`docs/DESIGN.md`](./docs/DESIGN.md)**。想贡献替代规则或参与开发，见
+**[`CONTRIBUTING.md`](./CONTRIBUTING.md)**。
 
 ## License
 
-MIT（建议）。
+MIT — see [LICENSE](./LICENSE).

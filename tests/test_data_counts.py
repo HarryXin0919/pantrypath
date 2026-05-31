@@ -44,9 +44,9 @@ def test_no_duplicate_target_blocks():
 
 
 def test_docs_cite_the_real_numbers():
-    # README + CLAUDE.md must contain the true counts (cheap anti-drift check).
+    # README + docs/DESIGN.md must contain the true counts (cheap anti-drift check).
     ings, targets, rules = _counts()
-    for doc in ("README.md", "CLAUDE.md"):
+    for doc in ("README.md", "docs/DESIGN.md"):
         text = (ROOT / doc).read_text(encoding="utf-8")
         assert str(ings) in text, f"{doc} missing ingredient count {ings}"
         assert str(targets) in text, f"{doc} missing target count {targets}"
