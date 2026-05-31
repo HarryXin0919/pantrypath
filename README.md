@@ -9,85 +9,100 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 ![Tests](https://img.shields.io/badge/tests-40%20passed-success)
 
-缺一味料别弃菜。PantryPath 把"食材替代"建模成**图上的最短路径 / 最短超路径**问题，
-根据你**现有**的食材，返回还原度最高（走味最少）的替代链。
+Out of one ingredient? Don't ditch the dish. PantryPath models ingredient
+substitution as a **shortest-path / shortest-hyperpath** problem and, given what
+you **already have**, returns the highest-fidelity (least-flavor-loss) substitution
+chain.
 
 ```
-没有酪乳？  →  牛奶 + 醋   （还原度 85%）
+No buttermilk?  →  milk + vinegar   (85% fidelity)
 ```
 
-## 为什么不一样
+## Why it's different
 
-GitHub 上的同类工具多是"我有这些料能做什么菜"（菜谱检索），或调 Spoonacular 给一层替代。
-学术界（GISMo、FlavorGraph、FoodKG）确实用图，但走的是 **ML 嵌入 / GNN**。PantryPath 的差异：
+Most similar tools answer "what can I cook with what I have" (recipe search), or
+call Spoonacular for a single layer of substitutes. Academic work (GISMo,
+FlavorGraph, FoodKG) does use graphs — but via **ML embeddings / GNNs**. PantryPath
+is different:
 
-- 🧮 **经典算法**：归约为加权图最短路径 / **有向超图最短超路径**，用 Dijkstra 求解——干净、可证明、可单测。
-- 🧪 **复合替代是核心**：酪乳 = 牛奶 **且** 醋。普通图表达不了"同时要两样"，用 **AND/OR 超图**解决。
-- 🎒 **口袋感知**：从你已有的食材多源出发，命中即停。
-- 🔗 **多跳链**：奶粉+水 → 牛奶 → (+醋) → 酪乳，逐跳累加走味。
-- 🔍 **完全可解释 + 离线**：输出一棵替代树和每步成本，不联网、不要 API、不训练模型。
-- 🥗 **饮食标签**：可要求保持 `vegan` / `gluten_free`，破坏标签的替代自动排除。
+- 🧮 **Classic algorithm** — reduced to weighted shortest path / **directed-hypergraph
+  shortest hyperpath**, solved with Dijkstra. Clean, provable, unit-tested.
+- 🧪 **Compound substitution is the core** — buttermilk = milk **AND** vinegar. A plain
+  graph can't express "you need both"; an **AND/OR hypergraph** can.
+- 🎒 **Pantry-aware** — multi-source search from the ingredients you already have; stop on hit.
+- 🔗 **Multi-hop chains** — powdered milk + water → milk → (+ vinegar) → buttermilk,
+  accumulating flavor loss hop by hop.
+- 🔍 **Fully explainable + offline** — outputs a substitution tree with a per-step cost;
+  no network, no API, no trained model.
+- 🥗 **Dietary tags** — require `vegan` / `gluten_free` and substitutions that break the
+  tag are excluded automatically.
 
-## 快速上手
+> 中文用户：核心思想与本说明一致 —— 把"缺料救场"建模成超图最短路径，给出还原度最高的替代链。
+> 完整中英对照的设计文档见 [`docs/DESIGN.md`](./docs/DESIGN.md)。
+
+## Quickstart
 
 ```bash
-# 从源码安装（暂未发布到 PyPI）
+# install from source (not yet published to PyPI)
 git clone https://github.com/HarryXin0919/pantrypath.git
 cd pantrypath
-pip install -e .        # 装上后可用 pantrypath 命令；开发加 .[dev]，Web UI 加 .[web]
+pip install -e .        # gives you the `pantrypath` command; add .[dev] for tests, .[web] for the UI
 
-# 招牌例子
+# the signature example
 python -m pantrypath.cli --need buttermilk --have milk,white_vinegar,sugar,egg
-# 或安装后直接：
+# or, after install:
 pantrypath --need buttermilk --have milk,white_vinegar,sugar,egg
 ```
 
-输出：
+Output (the CLI prints a bilingual substitution tree):
 
 ```
-🍳 目标食材：buttermilk
-   总还原成本：0.15   ≈ 口味保真度 85%
-   实际使用：milk, white_vinegar
-替代方案：
-└─ buttermilk  ⇐ 用 milk + white_vinegar  (成本 0.15)
-         · 1 杯牛奶 + 1 汤匙白醋，静置 10 分钟
-   ├─ milk  ✅ 已有
-   └─ white_vinegar  ✅ 已有
+🍳 目标食材 / target: buttermilk
+   总还原成本 / total cost: 0.15   ≈ fidelity 85%
+   实际使用 / uses: milk, white_vinegar
+替代方案 / plan:
+└─ buttermilk  ⇐ milk + white_vinegar  (cost 0.15)
+         · 1 cup milk + 1 tbsp white vinegar, rest 10 min
+   ├─ milk  ✅ have
+   └─ white_vinegar  ✅ have
 ```
 
-更多用法：
+More usage:
 
 ```bash
-# 多跳：奶粉+水 → 牛奶 → 酪乳
+# multi-hop: powdered milk + water → milk → buttermilk
 python -m pantrypath.cli --need buttermilk --have powdered_milk,water,white_vinegar
-# 纯素鸡蛋
+# vegan egg
 python -m pantrypath.cli --need egg --have flaxseed,water --require vegan
-# 一次解决多个缺料
+# several missing ingredients at once
 python -m pantrypath.cli --need cake_flour,buttermilk --have all_purpose_flour,cornstarch,milk,lemon_juice
-# Top-k：除最省外再给次优方案并排比较
+# Top-k: the cheapest plan plus runners-up, side by side
 python -m pantrypath.cli --need buttermilk --have milk,white_vinegar,lemon_juice,plain_yogurt,water --top-k 3
 ```
 
-加 `--top-k 3` 时输出多个备选(按还原度排序):
+With `--top-k 3` you get several alternatives ranked by fidelity:
 
 ```
-🍳 目标食材：buttermilk —— 3 个备选方案（按还原度排序）
-【最省】成本 0.15  ≈ 保真度 85%  · 用 milk, white_vinegar
-【备选2】成本 0.15  ≈ 保真度 85%  · 用 milk, lemon_juice
-【备选3】成本 0.20  ≈ 保真度 80%  · 用 plain_yogurt, water
+🍳 buttermilk — 3 alternatives (ranked by fidelity)
+[best ] cost 0.15  ≈ 85%  · milk, white_vinegar
+[alt 2] cost 0.15  ≈ 85%  · milk, lemon_juice
+[alt 3] cost 0.20  ≈ 80%  · plain_yogurt, water
 ```
 
-> Top-k 的语义:保留产出该食材的 **前 k 优规则**(每个规则的原料用各自最省子解填充),
-> 给出"方案 A / B / C"并排比较。这**不是**完整的 k-最短超路径枚举(那还会变化子解),
-> 属未来工作——README 据实表述,不夸大。
+> Top-k semantics: it keeps the **top-k rules** that produce the target (each rule's
+> components are filled by their own cheapest sub-solution) for an "A / B / C"
+> comparison. It is **not** a full k-shortest-hyperpath enumeration (which would also
+> vary the sub-solutions) — that is future work, and the README states this honestly.
 
-### 📋 菜谱整段解析
+### 📋 Recipe-block parsing
 
-粘贴一整段配料表，PantryPath 会逐行识别食材、自动跳过你已有的，再对**每个缺料**各跑一次求解，
-汇总每个缺料的最省替代链。识别只用知识库里的食材名做最长匹配，数量/单位/不认识的行会被自动处理。
+Paste a whole ingredient list; PantryPath identifies ingredients line by line,
+skips what you already have, then solves once **per missing ingredient** and
+summarizes the cheapest chain for each. Recognition uses longest-match against the
+knowledge base; quantities, units, and unknown lines are handled automatically.
 
 ```bash
-# 直接传文本
+# pass text directly
 python -m pantrypath.cli recipe --have all_purpose_flour,milk,white_vinegar,sugar \
     --recipe-text "2 cups all-purpose flour
 1 cup buttermilk
@@ -95,59 +110,66 @@ python -m pantrypath.cli recipe --have all_purpose_flour,milk,white_vinegar,suga
 1 large egg
 1 tsp vanilla extract"
 
-# 从文件读
+# read from a file
 python -m pantrypath.cli recipe --have milk,white_vinegar --recipe-file cake.txt
-# 从管道读
+# read from a pipe
 type cake.txt | python -m pantrypath.cli recipe --have milk,white_vinegar      # Windows
 cat  cake.txt | python -m pantrypath.cli recipe --have milk,white_vinegar      # macOS/Linux
 ```
 
-输出（节选）：
+Output (excerpt):
 
 ```
-📋 菜谱解析结果
-   识别到 4 种食材（共 5 行）
-   ✅ 已有：all_purpose_flour, sugar
-   ❓ 未识别（不在知识库里，已跳过）：1 tsp vanilla extract
-   🔍 缺料 2 种，其中 1 种可替代，1 种暂无方案
+📋 recipe parse
+   recognized 4 ingredients (5 lines)
+   ✅ have: all_purpose_flour, sugar
+   ❓ unrecognized (not in KB, skipped): 1 tsp vanilla extract
+   🔍 2 missing — 1 substitutable, 1 with no plan
 ============================================================
 
-🍳 目标食材：buttermilk
-   总还原成本：0.15   ≈ 口味保真度 85%
+🍳 target: buttermilk
+   total cost: 0.15   ≈ fidelity 85%
    ...
-❌ 找不到「egg」的替代方案（用现有食材无法还原）。
+❌ no substitution found for "egg" (can't be reconstructed from what you have).
 ```
 
-## 工作原理（一句话）
+## How it works (in one sentence)
 
-每个替代选项 = 一个**规则节点**，把它的若干"原料食材"（AND）连到"目标食材"；
-口袋食材成本为 0，跑**广义 Dijkstra**：规则在其所有原料都定值后触发，成本 = 规则成本 + Σ 原料成本；
-回溯得到一棵替代树。完整形式化见 [`docs/DESIGN.md`](./docs/DESIGN.md)。
+Each substitution option is a **rule node** wiring its component ingredients (AND)
+to the target ingredient; pantry ingredients start at cost 0, and a **generalized
+Dijkstra** fires a rule once all its components are settled (cost = rule cost + Σ
+component costs), then backtracks into a substitution tree. Full formalization in
+[`docs/DESIGN.md`](./docs/DESIGN.md).
 
-## 知识库
+## Knowledge base
 
-内置 **310 种食材 · 225 个目标 · 449 条替代规则**（经文献核查校正），覆盖乳制品、面粉谷物、糖与糖浆、油脂、
-酸/醋、发酵剂、香料(含 AND 复合调料粉如 `pumpkin_pie_spice = 肉桂+姜+肉豆蔻+丁香`)、增稠剂、
-巧克力、调味品等。扩充只改 [`pantrypath/data/substitutions.yaml`](./pantrypath/data/substitutions.yaml)，无需动代码：
+Ships **310 ingredients · 225 targets · 449 substitution rules** (corrected against
+culinary literature), covering dairy, flours & grains, sugars & syrups, fats,
+acids/vinegars, leaveners, spices (including AND compound spice blends such as
+`pumpkin_pie_spice = cinnamon + ginger + nutmeg + cloves`), thickeners, chocolate,
+condiments, and more. Extend it by editing only
+[`pantrypath/data/substitutions.yaml`](./pantrypath/data/substitutions.yaml) — no
+code changes:
 
 ```yaml
 substitutions:
   - target: buttermilk
     options:
-      - {components: [milk, white_vinegar], cost: 0.15, note: "1 杯牛奶 + 1 汤匙白醋，静置 10 分钟"}
+      - {components: [milk, white_vinegar], cost: 0.15, note: "1 cup milk + 1 tbsp white vinegar, rest 10 min"}
 ```
 
-## 测试
+## Tests
 
 ```bash
 pytest -q     # 40 passed
 ```
 
-## 设计与竞品调研
+## Design & related work
 
-算法形式化、成本模型、设计取舍与相似项目（GISMo / FlavorGraph / FoodKG）的诚实对比见
-**[`docs/DESIGN.md`](./docs/DESIGN.md)**。想贡献替代规则或参与开发，见
-**[`CONTRIBUTING.md`](./CONTRIBUTING.md)**。
+Algorithm formalization, the cost model, design trade-offs, and an honest
+comparison with similar projects (GISMo / FlavorGraph / FoodKG) are in
+**[`docs/DESIGN.md`](./docs/DESIGN.md)**. To contribute substitution rules or code,
+see **[`CONTRIBUTING.md`](./CONTRIBUTING.md)**.
 
 ## License
 
