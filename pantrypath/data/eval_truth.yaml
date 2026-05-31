@@ -1,0 +1,56 @@
+# Ground-truth substitutions for evaluating PantryPath (PLAN §B.8).
+# Each case: a target ingredient + a pantry to search from + the set(s) of
+# component ingredients a cook would accept as a correct substitution.
+# Metrics (eval.py): Precision@k = fraction of cases whose accepted substitute
+# appears within the top-k alternatives; MRR = mean reciprocal rank of the first
+# accepted hit; Coverage = fraction of cases the engine can solve at all.
+#
+# These are hand-checked, well-known culinary swaps. Extend freely.
+cases:
+  - target: buttermilk
+    pantry: [milk, white_vinegar, lemon_juice, plain_yogurt, water]
+    accept: [[milk, white_vinegar], [milk, lemon_juice], [plain_yogurt, water]]
+
+  - target: cake_flour
+    pantry: [all_purpose_flour, cornstarch]
+    accept: [[all_purpose_flour, cornstarch]]
+
+  - target: self_raising_flour
+    pantry: [all_purpose_flour, baking_powder, salt]
+    accept: [[all_purpose_flour, baking_powder, salt]]
+
+  - target: baking_powder
+    pantry: [baking_soda, cream_of_tartar]
+    accept: [[baking_soda, cream_of_tartar]]
+
+  - target: egg
+    pantry: [flaxseed, water, applesauce]
+    accept: [[flaxseed, water], [applesauce]]
+
+  - target: butter
+    pantry: [oil]
+    accept: [[oil]]
+
+  - target: honey
+    pantry: [maple_syrup, sugar, water]
+    accept: [[maple_syrup], [sugar, water]]
+
+  - target: heavy_cream
+    pantry: [milk, butter]
+    accept: [[milk, butter]]
+
+  - target: tomato_sauce
+    pantry: [tomato_paste, water]
+    accept: [[tomato_paste, water]]
+
+  - target: pumpkin_pie_spice
+    pantry: [cinnamon, ground_ginger, ground_nutmeg, ground_cloves]
+    accept: [[cinnamon, ground_ginger, ground_nutmeg, ground_cloves]]
+
+  - target: rice_vinegar
+    pantry: [apple_cider_vinegar, white_wine_vinegar]
+    accept: [[white_wine_vinegar], [apple_cider_vinegar]]
+
+  - target: dark_brown_sugar
+    pantry: [sugar, molasses]
+    accept: [[sugar, molasses]]

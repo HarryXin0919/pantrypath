@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pantrypath"
+version = "0.1.0"
+description = "Find the cheapest substitution chain when you're out of an ingredient, by modeling cooking substitutions as a shortest-hyperpath problem."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Harry"}]
+keywords = ["cooking", "ingredient-substitution", "graph", "shortest-path", "hypergraph", "networkx"]
+dependencies = [
+    "networkx>=3.0",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+web = ["streamlit>=1.30"]
+
+[project.scripts]
+pantrypath = "pantrypath.cli:main"
+pantrypath-eval = "pantrypath.eval:main"
+
+[tool.setuptools]
+packages = ["pantrypath"]
+
+[tool.setuptools.package-data]
+pantrypath = ["data/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
