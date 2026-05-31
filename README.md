@@ -4,6 +4,11 @@
 > substitution chain — by modeling cooking substitutions as a **shortest-hyperpath** problem.
 > No ML, no API.*
 
+[![CI](https://github.com/HarryXin0919/pantrypath/actions/workflows/ci.yml/badge.svg)](https://github.com/HarryXin0919/pantrypath/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+![Tests](https://img.shields.io/badge/tests-40%20passed-success)
+
 缺一味料别弃菜。PantryPath 把"食材替代"建模成**图上的最短路径 / 最短超路径**问题，
 根据你**现有**的食材，返回还原度最高（走味最少）的替代链。
 
@@ -26,10 +31,15 @@ GitHub 上的同类工具多是"我有这些料能做什么菜"（菜谱检索�
 ## 快速上手
 
 ```bash
-pip install -r requirements.txt
+# 从源码安装（暂未发布到 PyPI）
+git clone https://github.com/HarryXin0919/pantrypath.git
+cd pantrypath
+pip install -e .        # 装上后可用 pantrypath 命令；开发加 .[dev]，Web UI 加 .[web]
 
 # 招牌例子
 python -m pantrypath.cli --need buttermilk --have milk,white_vinegar,sugar,egg
+# 或安装后直接：
+pantrypath --need buttermilk --have milk,white_vinegar,sugar,egg
 ```
 
 输出：
