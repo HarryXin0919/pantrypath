@@ -79,7 +79,8 @@ python -m pantrypath.cli recipe --have milk,white_vinegar --recipe-file cake.txt
 - ✅ Phase 3 部分（`require_tags` 饮食标签过滤）
 - ✅ Phase 3：**菜谱整段解析**（`recipe.py` + `cli recipe` 子命令；逐个缺料批量求解）
 - ✅ Phase 3：**Top-k 备选方案**（`solve_topk()` + `--top-k`；前 k 优规则并排比较）
-- ✅ Phase 3：**数据扩充到 100+ 条**（当前 310 食材 / 225 目标 / 450 规则，两轮多代理起草+对抗式核验；覆盖烘焙/乳制品 + 坚果种子/生鲜香料/亚洲全球调料/蛋白豆类/调味品/饮品，含 AND 复合调料粉）
+- ✅ Phase 3：**数据扩充到 100+ 条**（当前 310 食材 / 225 目标 / 448 规则，两轮多代理起草+对抗式核验；覆盖烘焙/乳制品 + 坚果种子/生鲜香料/亚洲全球调料/蛋白豆类/调味品/饮品，含 AND 复合调料粉）
+- ✅ **文献核查**：对高风险(复合 AND + 化学转化)规则用真实烹饪文献(King Arthur / Serious Eats / ATK / Harold McGee / BBC Good Food)核验 — 50 valid / 33 补全外部条件 / 13 改正 / 2 删除；外部条件已写进 note(如小苏打需配酸、淀粉需冷水调浆、明胶↔琼脂非 1:1、可可→巧克力需加脂、亚麻籽蛋仅作粘合、鲜:干香草约 3:1)
 - ✅ Phase 3：**Streamlit Web UI**（`app.py`；`pip install -e ".[web]"` 后 `streamlit run app.py`）
 - ✅ Phase 3：**评估脚本**（`eval.py` + `pantrypath-eval`；**在项目自带 ground-truth 上自评** Precision@3=1.00 / MRR=1.00 / Coverage=1.00，非与外部基线对比）
 - ✅ 打包修复：数据已移入包内 `pantrypath/data/`，用 `importlib.resources` 读取，安装为 wheel 后仍可用（控制台脚本任意目录可跑）
@@ -90,7 +91,7 @@ python -m pantrypath.cli recipe --have milk,white_vinegar --recipe-file cake.txt
 1. ~~**菜谱整段解析**：粘贴一段配料表 → 抽出食材 → 对每个缺料各跑一次 solver。~~ ✅ 已完成（`recipe.py` + `cli recipe`）
 2. ~~**Top-k 备选方案**：除最省方案外，给出次优 2~3 个并排比较。~~ ✅ 已完成（`solve_topk()`，保留前 k 优规则；非完整 k-最短超路径，见函数 docstring）
 3. ~~**Streamlit Web UI**：粘贴菜谱 + 勾选已有食材 + 渲染替代树（`app.py`）。~~ ✅ 已完成（`app.py`，`streamlit run app.py`；含 AppTest 无头测试）
-4. ~~**数据扩充到 100+ 条**：手工种子 + 挖掘。~~ ✅ 已完成（310 食材 / 225 目标 / 450 规则；两轮多代理起草 + 对抗式核验 + 人工去噪，后续可继续从 Food.com 评论 / Recipe1MSubs 扩充）。
+4. ~~**数据扩充到 100+ 条**：手工种子 + 挖掘。~~ ✅ 已完成（310 食材 / 225 目标 / 448 规则；两轮多代理起草 + 对抗式核验 + 文献核查 + 人工去噪，后续可继续从 Food.com 评论 / Recipe1MSubs 扩充）。
 5. ~~**评估脚本**：用 ground-truth 替代对算 Precision@k / MRR。~~ ✅ 已完成（`eval.py` + `pantrypath-eval`；当前 P@3=1.00 / MRR=1.00 / Coverage=1.00，对 Spoonacular 基线对比仍可后补）。
 6. ~~**打包数据文件**：`importlib.resources` 读取包内数据。~~ ✅ 已完成（数据移入 `pantrypath/data/`，`graph.load_default_graph()` 用 `importlib.resources`；wheel 已验证含数据，控制台脚本任意目录可跑）。
 

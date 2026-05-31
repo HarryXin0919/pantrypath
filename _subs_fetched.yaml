@@ -1,4 +1,4 @@
-ingredients:
+﻿ingredients:
   buttermilk:
     tags:
     - vegetarian
@@ -2162,8 +2162,7 @@ substitutions:
   - components:
     - half_and_half
     cost: 0.2
-    note: Equal parts whole milk + heavy cream = 1 cup half-and-half, but this runs slightly rich (~18%
-      fat vs commercial ~10-12%). For a closer match use 3/4 cup whole milk + 1/4 cup heavy cream.
+    note: use 1:1; richer but works in most baking and sauces
   - components:
     - coconut_milk
     cost: 0.4
@@ -2201,10 +2200,8 @@ substitutions:
   - components:
     - cream_cheese
     - heavy_cream
-    cost: 0.35
-    note: 'NOT equal parts: blend mostly cream cheese with a smaller amount of heavy cream (about 8 oz
-      cream cheese : 1/4 cup heavy cream); mix just until smooth (don''t overwhip). Approximates mascarpone
-      richness for cheesecake; tangier than the real thing.'
+    cost: 0.2
+    note: beat 8 oz cream cheese + 1/4 cup heavy cream until smooth
   - components:
     - creme_fraiche
     cost: 0.2
@@ -2249,8 +2246,7 @@ substitutions:
   - components:
     - sour_cream
     cost: 0.2
-    note: Substitute 1:1, preferably FULL-FAT Greek yogurt for matching richness. Tangier than sour cream;
-      in hot dishes add at the END and avoid boiling to prevent curdling.
+    note: use 1:1; richer with less tang, fine for dips and baking
   - components:
     - silken_tofu
     - lemon_juice
@@ -2271,9 +2267,7 @@ substitutions:
   - components:
     - heavy_cream
     cost: 0.1
-    note: Use full-fat coconut cream; refrigerate the can OVERNIGHT, scoop ONLY the solidified cream (discard
-      the watery liquid), and whip cold with chilled bowl/beaters. Whips dairy-free but carries coconut
-      flavor and holds softer peaks.
+    note: use 1:1; heavy cream has more fat and whips slightly stiffer
   - components:
     - coconut_cream
     cost: 0.4
@@ -2446,9 +2440,8 @@ substitutions:
   - components:
     - instant_yeast
     cost: 0.1
-    note: 'Roughly interchangeable but NOT exactly 1:1: to match active dry''s strength use ~25% less
-      instant (x0.75), or use 1:1 and accept a faster rise. Convert by weight. Instant goes into dry ingredients;
-      active dry is best proofed in warm liquid first. Allow proof/rise time.'
+    note: Use 1 tsp instant for every 1.25 tsp active dry (about 25% less); instant can skip proofing
+      and be mixed straight into dry ingredients.
   - components:
     - fresh_yeast
     cost: 0.1
@@ -2473,10 +2466,8 @@ substitutions:
   options:
   - components:
     - active_dry_yeast
-    cost: 0.2
-    note: NOT 1:1. Fresh yeast is ~2x the weight of active dry, so to replace fresh use about 0.4-0.5x
-      its weight in active dry (roughly 1/3 the weight in instant). Dissolve/proof the active dry and
-      allow rise time.
+    cost: 0.1
+    note: 'Use 1/3 the weight: 1 part fresh = ~0.33 part active dry; proof in warm liquid before use.'
   - components:
     - instant_yeast
     cost: 0.15
@@ -2501,11 +2492,9 @@ substitutions:
   options:
   - components:
     - baking_powder
-    cost: 0.3
-    note: 1 tsp baking soda = ~3 tsp baking powder (powder is ~3-4x weaker). NOT a 1:1 swap. Baking soda
-      only leavens when the recipe already has an acid (buttermilk, yogurt, lemon, brown sugar, cocoa);
-      baking powder brings its own acid, so substituting it can leave the recipe's acid un-neutralized
-      and taste sour/metallic. Last resort only.
+    cost: 0.4
+    note: Use 1:1 by volume; works for cookies/crackers but gives less of the signature ultra-crisp snap
+      and no ammonia aroma to bake off.
   - components:
     - baking_soda
     - cream_of_tartar
@@ -2522,10 +2511,8 @@ substitutions:
       per cup of flour in the recipe.
   - components:
     - water
-    cost: 0.4
-    note: Use sparkling/seltzer water (or beer) 1:1 - the carbonation provides the lift and lightness.
-      Plain still water is NOT equivalent and gives a denser, heavier batter; use only in a pinch with
-      reduced expectations.
+    cost: 0.5
+    note: Plain water keeps liquid volume but loses the carbonation lift; best only when bubbles are non-essential.
 - target: molasses
   options:
   - components:
@@ -2856,10 +2843,8 @@ substitutions:
   options:
   - components:
     - white_vinegar
-    cost: 0.15
-    note: 'For stabilizing egg whites ONLY: 1/2 tsp cream of tartar = 1 tsp white vinegar (or lemon juice).
-      Do NOT use as the dry leavening acid in homemade baking powder - a liquid acid cannot replace the
-      powdered acid there.'
+    cost: 0.2
+    note: 1:1 swap; white vinegar is sharper and lacks fruity notes, so use a touch less in dressings
   - components:
     - lemon_juice
     cost: 0.3
@@ -3033,9 +3018,7 @@ substitutions:
   - components:
     - fresh_garlic
     cost: 0.3
-    note: 1/8 tsp garlic powder = 1 minced clove. Fresh adds moisture and sharper, less-even garlic flavor
-      - not a perfect 1:1 in texture. In COOKED dishes, saute the fresh garlic briefly to mellow its raw
-      bite; in raw/no-cook uses (rubs, dressings) texture and intensity differ noticeably.
+    note: 1/8 tsp garlic powder = 1 fresh clove, minced; saute to mellow raw bite
   - components:
     - garlic_salt
     cost: 0.4
@@ -3069,9 +3052,7 @@ substitutions:
     - cinnamon
     - ground_nutmeg
     cost: 0.4
-    note: 'Emergency 2-spice version: 3/4 tsp cinnamon + 1/4 tsp nutmeg per 1 tsp. INCOMPLETE approximation
-      - missing the ginger ''bite'' and clove warmth of real pumpkin pie spice; add a pinch of ground
-      ginger if available to get closer.'
+    note: 'simplest version: 3/4 tsp cinnamon + 1/4 tsp nutmeg per 1 tsp'
   - components:
     - apple_pie_spice
     cost: 0.2
@@ -3141,6 +3122,11 @@ substitutions:
 - target: ground_ginger
   options:
   - components:
+    - allspice
+    - cinnamon
+    cost: 0.5
+    note: 1/4 tsp ground ginger = equal pinch of allspice + cinnamon in baking
+  - components:
     - pumpkin_pie_spice
     cost: 0.5
     note: swap roughly 1:1 in sweet bakes; adds cinnamon and clove notes
@@ -3207,10 +3193,9 @@ substitutions:
   options:
   - components:
     - cornstarch
-    cost: 0.15
-    note: 1:1 is fine. Slurry the cornstarch in cold liquid first. Note cornstarch must be brought near
-      a boil to set (arrowroot sets at lower temp), gives a more opaque finish, and is less stable with
-      acid or freeze-thaw.
+    cost: 0.2
+    note: 2 tsp arrowroot = 1 tbsp cornstarch; cornstarch clouds and dislikes acid/long heat, but is the
+      closest pantry swap
   - components:
     - tapioca_starch
     cost: 0.15
@@ -3223,10 +3208,8 @@ substitutions:
   options:
   - components:
     - cornstarch
-    cost: 0.15
-    note: Roughly 1:1. Slurry in cold liquid first. Cornstarch gives a more opaque, smoother set vs. tapioca's
-      glossy, slightly chewy clear set; cornstarch is less freeze-thaw/acid stable, so it's a weaker choice
-      for fruit fillings that will be frozen.
+    cost: 0.25
+    note: 2 tbsp tapioca = 1 tbsp cornstarch; cornstarch is ~2x stronger and less glossy/stretchy
   - components:
     - arrowroot
     cost: 0.15
@@ -3255,9 +3238,8 @@ substitutions:
   - components:
     - cornstarch
     cost: 0.3
-    note: Use half as much cornstarch (2 parts flour = 1 part cornstarch) since cornstarch is ~2x stronger.
-      Slurry the cornstarch in cold liquid, add near the END, and don't over-boil (it breaks down with
-      long heat). Result is glossy/translucent vs. flour's matte, opaque set.
+    note: 1 tbsp flour = 1/2 tbsp cornstarch; clearer and glossier, lacks the toasty flavor of cooked
+      flour
   - components:
     - arrowroot
     cost: 0.35
@@ -3289,10 +3271,8 @@ substitutions:
   - components:
     - agar_agar
     cost: 0.4
-    note: NOT 1:1. Agar is much stronger and sets firmer/brittle - use roughly 1 tsp agar powder per 1
-      Tbsp (~8 tsp) gelatin, then adjust. Agar MUST be boiled 2-5 min to activate (gelatin must NOT boil)
-      and sets at room temperature with a firm, non-melting texture vs. gelatin's soft, melt-in-mouth
-      set.
+    note: 1 tbsp powdered gelatin = ~1 tsp agar powder; agar is vegan but sets much firmer and at room
+      temp, won't melt in the mouth
   - components:
     - cornstarch
     cost: 0.6
@@ -3310,20 +3290,15 @@ substitutions:
   - components:
     - cornstarch
     cost: 0.6
-    note: 'NOT 1:1 - very different thickeners. Xanthan gum is ~8-10x more potent than cornstarch and
-      thickens cold/instantly, so replacing xanthan with cornstarch needs much MORE cornstarch plus heat
-      and a cold-liquid slurry. For cold/uncooked uses (dressings, GF baking) cornstarch is a poor substitute.
-      In reverse use xanthan sparingly: ~1/8-1/4 tsp per 1 Tbsp cornstarch.'
+    note: 'thickening fallback only: ~1 tbsp cornstarch per 1/4 tsp xanthan; will not bind or emulsify
+      gluten-free dough'
 - target: instant_clearjel
   options:
   - components:
     - cornstarch
-    cost: 0.45
-    note: NOT a direct swap. Instant ClearJel is pre-cooked and thickens instantly in COLD liquid with
-      NO heat (no-bake fillings, freeze-thaw/weep-resistant pies). Cornstarch needs heat to set, so it
-      CANNOT replace ClearJel in uncooked applications, and it weeps/breaks down when frozen. Only roughly
-      substitutable in fully cooked dishes, where cornstarch must be slurried in cold liquid and brought
-      to a boil.
+    cost: 0.4
+    note: 1 tbsp instant ClearJel = ~1 tbsp cornstarch, but cornstarch must be cooked; ClearJel thickens
+      cold without heat
   - components:
     - tapioca_starch
     cost: 0.4
@@ -3359,9 +3334,7 @@ substitutions:
   - components:
     - chocolate_chips
     cost: 0.15
-    note: 1 oz = ~3 tbsp semisweet chocolate chips. Fine 1:1 for chunk uses (cookies, muffins). For melting
-      (ganache, glaze, dipping, smooth batters) chips don't melt smoothly due to added stabilizers (lecithin)
-      and less cocoa butter; use a chopped baking bar instead.
+    note: 1 oz = ~3 tbsp semisweet chocolate_chips; chips hold shape more when melted
 - target: bittersweet_chocolate
   options:
   - components:
@@ -3379,26 +3352,20 @@ substitutions:
     - natural_cocoa
     - baking_soda
     cost: 0.3
-    note: Use natural cocoa 1:1 and add ~1/8 tsp baking soda per 3 tbsp cocoa to neutralize its acidity
-      (approximates Dutch flavor/color). Natural-for-Dutch is the SAFE direction. In a leavened recipe,
-      note natural cocoa is acidic (reacts with baking soda) while Dutch is neutral (paired with baking
-      powder) - keep the leavening balanced so rise isn't thrown off.
+    note: Use natural_cocoa 1:1 and add 1/8 tsp baking_soda per 3 tbsp cocoa to neutralize acidity
 - target: natural_cocoa
   options:
   - components:
     - dutch_cocoa
     - cream_of_tartar
     cost: 0.35
-    note: Use Dutch cocoa 1:1 and add ~1/8 tsp cream of tartar per 3 tbsp cocoa to restore the acidity
-      natural cocoa provides. Important when the recipe leavens with baking soda (Dutch alone won't react
-      with soda); for unleavened uses the acid isn't strictly needed.
+    note: Use dutch_cocoa 1:1 and add ~1/8 tsp cream_of_tartar per 3 tbsp cocoa to restore acidity for
+      baking soda recipes
   - components:
     - dutch_cocoa
     - lemon_juice
     cost: 0.4
-    note: Use Dutch cocoa 1:1 and add ~1/4 tsp lemon juice per 3 tbsp cocoa when the recipe relies on
-      acid (i.e. leavens with baking soda). Cream of tartar is a cleaner, water-free acid; lemon adds
-      slight moisture/flavor.
+    note: Use dutch_cocoa 1:1 and add 1/4 tsp lemon_juice per 3 tbsp cocoa when recipe relies on acid
 - target: cocoa_powder
   options:
   - components:
@@ -3513,10 +3480,8 @@ substitutions:
   options:
   - components:
     - soy_sauce
-    cost: 0.35
-    note: Vegetarian stand-in (~1:1, use slightly less soy as it's saltier). Loses fish sauce's fermented-fish
-      funk; add a pinch of seaweed/kelp or mushroom powder, or a splash of rice vinegar/lime, to recover
-      umami and complexity.
+    cost: 0.4
+    note: 1:1 swap; vegan but loses the briny funk
   - components:
     - worcestershire_sauce
     cost: 0.35
@@ -3919,9 +3884,7 @@ substitutions:
     - rice_vinegar
     - sugar
     cost: 0.35
-    note: Last-resort non-alcoholic option; rice vinegar is much sharper than mirin, so increase sugar
-      to ~1 tsp per tbsp vinegar (not 1/2 tsp) and reduce other acid in the dish. Lacks mirin's alcohol/umami
-      depth; prefer the sake+sugar swap when possible.
+    note: 1 tbsp mirin = 1 tbsp rice_vinegar + 1/2 tsp sugar (non-alcoholic; sharper, reduce slightly)
 - target: sake
   options:
   - components:
@@ -3993,16 +3956,13 @@ substitutions:
     - ground_ginger
     - cayenne_pepper
     cost: 0.2
-    note: 'Coriander-DOMINANT blend per 1 tbsp: ~1.5 tsp coriander + 1 tsp cumin + 1 tsp turmeric + 1/2
-      tsp ginger + pinch cayenne (optional 1/4 tsp black pepper + pinch cinnamon/cardamom). Toast and
-      grind whole seeds if possible. (Coriander > cumin > turmeric.)'
+    note: 1 tbsp curry powder = 1.5 tsp turmeric + 1 tsp ground_cumin + 1 tsp ground_coriander + 1/4 tsp
+      ground_ginger + pinch cayenne_pepper
   - components:
     - garam_masala
     - turmeric
     cost: 0.3
-    note: 'Simplified: 2 tsp garam masala + 1 tsp turmeric per 1 tbsp. The turmeric adds the color/earthiness
-      curry powder needs; optionally add a pinch of cayenne for heat. Result is warmer-spiced than commercial
-      curry powder.'
+    note: 1 tbsp curry powder = 2 tsp garam_masala + 1 tsp turmeric
 - target: garam_masala
   options:
   - components:
@@ -4013,9 +3973,8 @@ substitutions:
     - ground_cloves
     - ground_nutmeg
     cost: 0.2
-    note: 1 tsp ~= 1/2 tsp cumin + 1/4 tsp coriander + 1/4 tsp cardamom + pinch each cinnamon, cloves,
-      AND BLACK PEPPER (nutmeg optional). Black pepper is essential to garam masala's warmth; without
-      it the blend tastes flat. Toast and grind whole spices for best result.
+    note: 1 tsp garam_masala = 1/2 tsp ground_cumin + 1/4 tsp ground_coriander + 1/4 tsp cardamom + pinch
+      each cinnamon, ground_cloves, ground_nutmeg
 - target: five_spice
   options:
   - components:
@@ -4612,3 +4571,4 @@ substitutions:
     - mustard_seed
     cost: 0.2
     note: 1 tsp ground mustard = 1 tsp mustard seeds, finely ground
+
