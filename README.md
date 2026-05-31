@@ -118,7 +118,7 @@ cat  cake.txt | python -m pantrypath.cli recipe --have milk,white_vinegar      #
 
 内置 **180 种食材 · 131 个目标 · 278 条替代规则**，覆盖乳制品、面粉谷物、糖与糖浆、油脂、
 酸/醋、发酵剂、香料(含 AND 复合调料粉如 `pumpkin_pie_spice = 肉桂+姜+肉豆蔻+丁香`)、增稠剂、
-巧克力、调味品等。扩充只改 [`data/substitutions.yaml`](./data/substitutions.yaml)，无需动代码：
+巧克力、调味品等。扩充只改 [`pantrypath/data/substitutions.yaml`](./pantrypath/data/substitutions.yaml)，无需动代码：
 
 ```yaml
 substitutions:

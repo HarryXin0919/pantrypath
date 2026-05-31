@@ -20,7 +20,7 @@ PantryPath 把"缺料救场"建模成**有向超图上的最短超路径**问题
    （按 `remaining[r]` 计数、集齐才触发）是**有意为之**，请勿替换为库函数。
 3. **成本 = 还原度损失，沿链求和**（0≈原味，越大越走味）；复合步成本 =
    `规则自身 cost + Σ 各原料 cost`。若要改成"取最大"等其它语义，必须同步更新 `PLAN.md` 与测试。
-4. **数据与代码解耦**：替代知识只放 `data/substitutions.yaml`，不要硬编码进 `.py`。
+4. **数据与代码解耦**：替代知识只放 `pantrypath/data/substitutions.yaml`，不要硬编码进 `.py`。
 5. **诚实的新颖性表述**：项目卖点是"用经典最短路径 / 超路径 + 复合替代 + 口袋感知 + 离线可解释"，
    **不是**"首个用图做替代"。学术界已有 GISMo / FlavorGraph / FoodKG（均用 ML 嵌入/GNN）。
    改 README 时别写成"第一个图方法"，会被证伪（详见 PLAN.md §A）。
@@ -35,11 +35,14 @@ pantrypath/
 ├── README.md                # 对外门面
 ├── pyproject.toml           # 可安装包 + 控制台脚本 + pytest 配置
 ├── requirements.txt
-├── data/substitutions.yaml  # 替代知识库（贡献者主要改这里）
 ├── pantrypath/
-│   ├── graph.py             # YAML → NetworkX 超图（规则节点编码）
+│   ├── data/                # 打包进 wheel 的数据（importlib.resources 读取）
+│   │   ├── substitutions.yaml  # 替代知识库（贡献者主要改这里）
+│   │   └── eval_truth.yaml     # 评估用 ground-truth
+│   ├── graph.py             # YAML → NetworkX 超图（规则节点编码）；load_default_graph()
 │   ├── solver.py            # 广义 Dijkstra / 最短超路径 + 回溯成树；solve() 与 solve_topk()
 │   ├── recipe.py            # 菜谱整段解析 → 逐个缺料批量求解
+│   ├── eval.py              # 评估 Precision@k / MRR / Coverage
 │   └── cli.py               # 命令行界面（含 `recipe` 子命令、`--top-k`）
 ├── app.py                  # Streamlit Web UI（粘贴菜谱 + 勾选已有 + 渲染替代树）
 └── tests/                   # 37 个单测，全过
@@ -94,7 +97,7 @@ python -m pantrypath.cli recipe --have milk,white_vinegar --recipe-file cake.txt
 
 - 代码注释与文档可中英混排（沿用现有风格）。
 - 任何行为改动都要：先改/加测试，再实现，保证 `pytest` 绿后再继续。
-- 新增替代规则：在 `data/substitutions.yaml` 加 `target` + `options`，并为关键路径补一条测试。
+- 新增替代规则：在 `pantrypath/data/substitutions.yaml` 加 `target` + `options`，并为关键路径补一条测试。
 
 ## 已知小坑
 
