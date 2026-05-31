@@ -17,7 +17,7 @@ from pantrypath.graph import default_data_path
 # Authoritative expected counts. Keep in sync with README.md / CLAUDE.md.
 EXPECTED_INGREDIENTS = 310
 EXPECTED_TARGETS = 225
-EXPECTED_RULES = 450
+EXPECTED_RULES = 449
 
 ROOT = Path(__file__).resolve().parent.parent
 

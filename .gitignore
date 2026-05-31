@@ -21,3 +21,9 @@ htmlcov/
 Thumbs.db
 .idea/
 .vscode/
+
+# scratch / research artifacts
+_subs_fetched.yaml
+_*.txt
+_*.py
+*.bak*
