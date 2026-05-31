@@ -1165,6 +1165,871 @@ ingredients:
     - gluten_free
     - dairy_free
     category: spice
+  peanut_butter:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: nut_butter
+  almond_butter:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: nut_butter
+  tahini:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: seed_butter
+  sunflower_seed_butter:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: seed_butter
+  cashew_butter:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: nut_butter
+  pine_nuts:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: nuts
+  walnuts:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: nuts
+  pecans:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: nuts
+  almonds:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: nuts
+  hazelnuts:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: nuts
+  pistachios:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: nuts
+  sesame_seeds:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: seeds
+  sunflower_seeds:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: seeds
+  pumpkin_seeds:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: seeds
+  nut_meal:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: ground_nuts
+  shallot:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: aromatic
+  scallion:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: aromatic
+  leek:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: aromatic
+  celery:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: vegetable
+  bell_pepper:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: vegetable
+  jalapeno:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: chili
+  fresh_basil:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: herb
+  fresh_cilantro:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: herb
+  fresh_parsley:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: herb
+  fresh_mint:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: herb
+  fresh_thyme:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: herb
+  fresh_rosemary:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: herb
+  lemongrass:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: aromatic
+  fresh_chili:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: chili
+  dried_mint:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: herb
+  yellow_onion:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: aromatic
+  serrano:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: chili
+  fennel_bulb:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: vegetable
+  lime_zest:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: aromatic
+  hoisin_sauce:
+    tags:
+    - vegetarian
+    - vegan
+    - dairy_free
+    category: condiment
+  oyster_sauce:
+    tags:
+    - dairy_free
+    category: condiment
+  mirin:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: condiment
+  sake:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: alcohol
+  gochujang:
+    tags:
+    - vegetarian
+    - vegan
+    - dairy_free
+    category: condiment
+  miso_paste:
+    tags:
+    - vegetarian
+    - vegan
+    - dairy_free
+    category: condiment
+  sriracha:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: condiment
+  sambal:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: condiment
+  curry_powder:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: spice
+  garam_masala:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: spice
+  five_spice:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: spice
+  dashi:
+    tags:
+    - dairy_free
+    - gluten_free
+    category: stock
+  rice_wine:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: alcohol
+  black_vinegar:
+    tags:
+    - vegetarian
+    - vegan
+    - dairy_free
+    category: vinegar
+  sweet_chili_sauce:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: condiment
+  turmeric:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: spice
+  ground_fennel:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: spice
+  star_anise:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: spice
+  sichuan_peppercorn:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: spice
+  kombu:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: seaweed
+  dried_shiitake:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: vegetable
+  chickpeas:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: legume
+  cannellini_beans:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: legume
+  navy_beans:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: legume
+  great_northern_beans:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: legume
+  black_beans:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: legume
+  pinto_beans:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: legume
+  kidney_beans:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: legume
+  brown_lentils:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: legume
+  green_lentils:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: legume
+  red_lentils:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: legume
+  split_peas:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: legume
+  firm_tofu:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: protein
+  extra_firm_tofu:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: protein
+  tempeh:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: protein
+  seitan:
+    tags:
+    - vegetarian
+    - vegan
+    - dairy_free
+    category: protein
+  ground_beef:
+    tags: []
+    category: protein
+  plant_crumbles:
+    tags:
+    - vegetarian
+    - vegan
+    - dairy_free
+    category: protein
+  textured_vegetable_protein:
+    tags:
+    - vegetarian
+    - vegan
+    - dairy_free
+    category: protein
+  ground_flaxseed:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: seed
+  lemon_extract:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: flavoring
+  mayonnaise:
+    tags:
+    - vegetarian
+    - gluten_free
+    category: condiment
+  whole_grain_mustard:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: condiment
+  english_mustard:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: condiment
+  relish:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: condiment
+  dill_pickles:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: condiment
+  capers:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: condiment
+  green_olives:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: condiment
+  anchovy_paste:
+    tags:
+    - gluten_free
+    - dairy_free
+    category: flavoring
+  anchovy_fillets:
+    tags:
+    - gluten_free
+    - dairy_free
+    category: flavoring
+  white_miso:
+    tags:
+    - vegetarian
+    - vegan
+    - dairy_free
+    category: flavoring
+  nutritional_yeast:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: flavoring
+  lemon_zest:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: flavoring
+  orange_zest:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: flavoring
+  orange_juice:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: juice
+  brewed_coffee:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: beverage
+  espresso_powder:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: flavoring
+  instant_coffee:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: flavoring
+  brewed_tea:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: beverage
+  black_tea_bag:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: flavoring
+  coconut_water:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: beverage
+  chicken_stock:
+    tags:
+    - gluten_free
+    - dairy_free
+    category: cooking_liquid
+  white_grape_juice:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: beverage
+  cranberry_juice:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: beverage
+  apple_juice:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: beverage
+  beer:
+    tags:
+    - vegetarian
+    - vegan
+    - dairy_free
+    category: cooking_liquid
+  vegetable_stock_concentrate:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: cooking_liquid
+  ginger_ale:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: beverage
+  pomegranate_juice:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: beverage
+  sweetened_flaked_coconut:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: baking
+  unsweetened_shredded_coconut:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: baking
+  marshmallow:
+    tags:
+    - gluten_free
+    category: confection
+  marshmallow_creme:
+    tags:
+    - gluten_free
+    category: confection
+  dulce_de_leche:
+    tags:
+    - vegetarian
+    - gluten_free
+    category: confection
+  graham_cracker_crumbs:
+    tags:
+    - vegetarian
+    category: baking
+  digestive_biscuit_crumbs:
+    tags:
+    - vegetarian
+    category: baking
+  vanilla_wafer_crumbs:
+    tags:
+    - vegetarian
+    category: baking
+  chocolate_syrup:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: topping
+  butterscotch_chips:
+    tags:
+    - vegetarian
+    - gluten_free
+    category: baking
+  candied_ginger:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: confection
+  date_syrup:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: sweetener
+  date_paste:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: sweetener
+  pitted_dates:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: fruit
+  smoked_paprika:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: spice
+  coriander_seed:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: spice
+  celery_salt:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: seasoning
+  celery_seed:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: spice
+  old_bay:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: blend
+  cajun_seasoning:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: blend
+  herbes_de_provence:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: blend
+  za_atar:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: blend
+  sumac:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: spice
+  mustard_seed:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: spice
+  ground_mustard:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: spice
+  dried_savory:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: herb
+  toasted_sesame_seeds:
+    tags:
+    - vegetarian
+    - vegan
+    - gluten_free
+    - dairy_free
+    category: seed
 substitutions:
 - target: buttermilk
   options:
@@ -2728,3 +3593,981 @@ substitutions:
     - ground_ginger
     cost: 0.3
     note: 1 汤匙鲜姜末 ≈ 1/4 茶匙姜粉
+- target: peanut_butter
+  options:
+  - components:
+    - almond_butter
+    cost: 0.2
+    note: 1:1 by volume; milder, slightly sweeter and pricier, similar texture in sauces and baking
+  - components:
+    - sunflower_seed_butter
+    cost: 0.3
+    note: 1:1; nut-free option, earthier flavor and can brown/green slightly when baked with baking soda
+  - components:
+    - cashew_butter
+    cost: 0.25
+    note: 1:1; milder and creamier, works well in sauces and spreads
+- target: almond_butter
+  options:
+  - components:
+    - cashew_butter
+    cost: 0.15
+    note: 1:1; creamier and milder, good in baking and smoothies
+  - components:
+    - peanut_butter
+    cost: 0.25
+    note: 1:1; stronger flavor and more processed taste, fine in most recipes
+  - components:
+    - sunflower_seed_butter
+    cost: 0.3
+    note: 1:1; nut-free, more pronounced earthy flavor
+- target: tahini
+  options:
+  - components:
+    - sunflower_seed_butter
+    cost: 0.3
+    note: 1:1; closest seed-based match, slightly sweeter and less bitter than tahini
+  - components:
+    - cashew_butter
+    cost: 0.4
+    note: 1:1; smooth and mild, lacks tahini's bitterness, thin with water for dressings
+  - components:
+    - sesame_seeds
+    - oil
+    cost: 0.35
+    note: blend 1 cup toasted sesame_seeds + 3-4 tbsp oil until smooth to make ~3/4 cup tahini
+- target: pine_nuts
+  options:
+  - components:
+    - cashews
+    cost: 0.3
+    note: 1:1 in pesto; buttery and mild, chop to size, lacks pine resin note
+  - components:
+    - almonds
+    cost: 0.35
+    note: 1:1; blanched slivered almonds toast well, firmer texture than pine nuts
+  - components:
+    - sunflower_seeds
+    cost: 0.4
+    note: 1:1; budget nut-free option for pesto, toast first, earthier flavor
+- target: walnuts
+  options:
+  - components:
+    - pecans
+    cost: 0.15
+    note: 1:1; sweeter and softer, near-interchangeable in baking and toppings
+  - components:
+    - hazelnuts
+    cost: 0.3
+    note: 1:1; firmer and sweeter, toast and skin first for best flavor
+- target: pecans
+  options:
+  - components:
+    - walnuts
+    cost: 0.15
+    note: 1:1; slightly more bitter and astringent, otherwise interchangeable in baking
+  - components:
+    - hazelnuts
+    cost: 0.35
+    note: 1:1; firmer with distinct flavor, good in similar roles
+- target: cashews
+  options:
+  - components:
+    - almonds
+    cost: 0.3
+    note: 1:1 whole/chopped; firmer and less creamy, soak for cashew-cream uses
+  - components:
+    - pine_nuts
+    cost: 0.4
+    note: 1:1 in creamy/blended uses; buttery and soft but much pricier
+- target: hazelnuts
+  options:
+  - components:
+    - almonds
+    cost: 0.3
+    note: 1:1; toast for warmth, lacks hazelnut's distinct flavor but similar crunch
+  - components:
+    - pecans
+    cost: 0.35
+    note: 1:1; softer and sweeter, works in baking and toppings
+- target: pistachios
+  options:
+  - components:
+    - almonds
+    cost: 0.4
+    note: 1:1; use blanched/slivered for color in baking, milder and lacks pistachio flavor
+  - components:
+    - pine_nuts
+    cost: 0.45
+    note: 1:1; soft buttery texture for similar uses, no green color
+- target: sunflower_seeds
+  options:
+  - components:
+    - pumpkin_seeds
+    cost: 0.15
+    note: 1:1; nut-free, slightly larger and chewier, toast for snacking and topping
+  - components:
+    - sesame_seeds
+    cost: 0.3
+    note: 1:1 as a topping; much smaller, toast for nuttiness
+- target: sesame_seeds
+  options:
+  - components:
+    - sunflower_seeds
+    cost: 0.4
+    note: 1:1 as a topping/crunch; larger seeds, chop if needed, lacks sesame aroma
+  - components:
+    - pumpkin_seeds
+    cost: 0.45
+    note: 1:1 for topping/texture only; very different size and flavor
+- target: nut_meal
+  options:
+  - components:
+    - almonds
+    cost: 0.2
+    note: pulse whole almonds with skins to coarse meal; 1 cup nuts ~ 1 cup meal, stop before it turns
+      to butter
+  - components:
+    - sunflower_seeds
+    cost: 0.35
+    note: grind to nut-free meal 1:1; earthier, may tint baked goods green with baking soda
+  - components:
+    - pecans
+    cost: 0.3
+    note: pulse to meal 1:1; richer and oilier, best for crusts and toppings
+- target: shallot
+  options:
+  - components:
+    - yellow_onion
+    cost: 0.3
+    note: 1 shallot = about 2 tbsp finely chopped yellow onion; milder, slightly sweeter shallot flavor
+      lost
+- target: scallion
+  options:
+  - components:
+    - yellow_onion
+    cost: 0.4
+    note: 1/2 cup chopped scallion = about 1/3 cup chopped onion; loses mild raw bite, cook briefly
+  - components:
+    - leek
+    cost: 0.3
+    note: equal volume chopped leek (white/light-green part), raw or lightly cooked
+- target: leek
+  options:
+  - components:
+    - yellow_onion
+    cost: 0.3
+    note: 1 leek = about 1 medium onion by volume; sweeter and stronger, reduce slightly
+  - components:
+    - scallion
+    cost: 0.35
+    note: equal volume scallion whites; milder, add near end of cooking
+- target: celery
+  options:
+  - components:
+    - fennel_bulb
+    cost: 0.4
+    note: 1 cup chopped celery = 1 cup chopped fennel bulb; faint anise note, similar crunch
+  - components:
+    - bell_pepper
+    cost: 0.5
+    note: 1 cup celery = 1 cup chopped green bell pepper in mirepoix/soups; crunch yes, flavor differs
+- target: jalapeno
+  options:
+  - components:
+    - serrano
+    cost: 0.2
+    note: 1 jalapeno = about 1/2 to 1 serrano; serrano is hotter, start small
+  - components:
+    - fresh_chili
+    cost: 0.3
+    note: 1 jalapeno = 1 mild fresh green chili; adjust to taste, heat varies
+  - components:
+    - red_pepper_flakes
+    cost: 0.5
+    note: 1 jalapeno = about 1/4 to 1/2 tsp red pepper flakes; heat yes, loses fresh vegetal flavor
+- target: fresh_basil
+  options:
+  - components:
+    - dried_basil
+    cost: 0.4
+    note: 1 tbsp fresh = 1 tsp dried (3:1); add during cooking, fresh better for garnish
+- target: fresh_cilantro
+  options:
+  - components:
+    - fresh_parsley
+    cost: 0.5
+    note: equal volume flat-leaf parsley for color/freshness; lacks cilantro's citrusy aroma
+- target: fresh_parsley
+  options:
+  - components:
+    - fresh_cilantro
+    cost: 0.4
+    note: equal volume cilantro for fresh green note; adds distinct citrusy flavor
+- target: fresh_mint
+  options:
+  - components:
+    - dried_mint
+    cost: 0.45
+    note: 1 tbsp fresh = 1 tsp dried (3:1); fine in cooked/steeped dishes, not for garnish
+- target: fresh_thyme
+  options:
+  - components:
+    - dried_thyme
+    cost: 0.3
+    note: 1 tbsp fresh = 1 tsp dried (3:1); add dried earlier in cooking
+- target: fresh_rosemary
+  options:
+  - components:
+    - dried_rosemary
+    cost: 0.3
+    note: 1 tbsp fresh = 1 tsp dried (3:1); crush dried and add early
+  - components:
+    - fresh_thyme
+    cost: 0.5
+    note: equal amount fresh thyme as a woody-herb stand-in; piney rosemary note lost
+- target: lemongrass
+  options:
+  - components:
+    - lime_zest
+    cost: 0.4
+    note: 1 stalk lemongrass = zest of 1 lime; citrus aroma yes, grassy depth lost
+- target: fresh_chili
+  options:
+  - components:
+    - red_pepper_flakes
+    cost: 0.4
+    note: 1 fresh chili = about 1/2 tsp red pepper flakes; heat retained, fresh flavor lost
+  - components:
+    - jalapeno
+    cost: 0.25
+    note: 1 fresh chili = 1 jalapeno; comparable heat and fresh vegetal flavor
+- target: hoisin_sauce
+  options:
+  - components:
+    - soy_sauce
+    - sugar
+    - black_vinegar
+    cost: 0.4
+    note: 2 tbsp hoisin = 2 tbsp soy_sauce + 1 tbsp sugar + 1 tsp black_vinegar (whisk; thinner and less
+      complex)
+  - components:
+    - miso_paste
+    - maple_syrup
+    - soy_sauce
+    cost: 0.35
+    note: 2 tbsp hoisin = 1 tbsp miso_paste + 1 tbsp maple_syrup + 1 tsp soy_sauce (richer umami-sweet)
+- target: oyster_sauce
+  options:
+  - components:
+    - soy_sauce
+    - sugar
+    - cornstarch
+    - water
+    cost: 0.45
+    note: 1 tbsp oyster sauce = 1 tbsp soy_sauce + 1 tsp sugar + 1/4 tsp cornstarch slurry in 1 tsp water
+      (simmer to thicken)
+  - components:
+    - miso_paste
+    - soy_sauce
+    - sugar
+    cost: 0.5
+    note: 1 tbsp oyster sauce = 1 tsp miso_paste + 2 tsp soy_sauce + 1/2 tsp sugar (deeper savory note)
+- target: mirin
+  options:
+  - components:
+    - rice_wine
+    - sugar
+    cost: 0.15
+    note: 1 tbsp mirin = 1 tbsp rice_wine + 1/2 tsp sugar (closest match; dissolve sugar)
+  - components:
+    - rice_vinegar
+    - sugar
+    cost: 0.35
+    note: 1 tbsp mirin = 1 tbsp rice_vinegar + 1/2 tsp sugar (non-alcoholic; sharper, reduce slightly)
+- target: sake
+  options:
+  - components:
+    - rice_wine
+    cost: 0.15
+    note: use rice_wine 1:1 for sake in cooking
+  - components:
+    - rice_vinegar
+    - water
+    cost: 0.5
+    note: 'non-alcoholic: 1 tbsp sake = 2 tsp water + 1 tsp rice_vinegar (loses depth)'
+- target: gochujang
+  options:
+  - components:
+    - miso_paste
+    - red_pepper_flakes
+    - sugar
+    - soy_sauce
+    cost: 0.4
+    note: 1 tbsp gochujang = 1 tbsp miso_paste + 1 tsp red_pepper_flakes + 1 tsp sugar + 1/2 tsp soy_sauce
+  - components:
+    - sriracha
+    - miso_paste
+    - sugar
+    cost: 0.45
+    note: 1 tbsp gochujang = 2 tsp sriracha + 1 tsp miso_paste + 1/2 tsp sugar (thinner, brighter heat)
+- target: miso_paste
+  options:
+  - components:
+    - soy_sauce
+    cost: 0.5
+    note: 1 tbsp miso = 1 tbsp soy_sauce for salty umami; loses body, reduce other liquid
+- target: sriracha
+  options:
+  - components:
+    - sambal
+    - sugar
+    - white_vinegar
+    - fresh_garlic
+    cost: 0.3
+    note: 1 tbsp sriracha = 1 tbsp sambal + 1/2 tsp sugar + 1/2 tsp white_vinegar + pinch grated fresh_garlic
+  - components:
+    - red_pepper_flakes
+    - white_vinegar
+    - fresh_garlic
+    - sugar
+    - water
+    cost: 0.45
+    note: blend 2 tsp red_pepper_flakes + 1 tsp white_vinegar + 1 clove fresh_garlic + 1/2 tsp sugar +
+      1 tbsp water into a smooth sauce
+- target: sambal
+  options:
+  - components:
+    - sriracha
+    cost: 0.25
+    note: use sriracha 1:1 for sambal; smoother and a touch sweeter, less raw chili texture
+  - components:
+    - red_pepper_flakes
+    - white_vinegar
+    - salt
+    cost: 0.4
+    note: 1 tbsp sambal = 2 tsp red_pepper_flakes + 1 tsp white_vinegar + pinch salt, mashed into a paste
+- target: curry_powder
+  options:
+  - components:
+    - turmeric
+    - ground_cumin
+    - ground_coriander
+    - ground_ginger
+    - cayenne_pepper
+    cost: 0.2
+    note: 1 tbsp curry powder = 1.5 tsp turmeric + 1 tsp ground_cumin + 1 tsp ground_coriander + 1/4 tsp
+      ground_ginger + pinch cayenne_pepper
+  - components:
+    - garam_masala
+    - turmeric
+    cost: 0.3
+    note: 1 tbsp curry powder = 2 tsp garam_masala + 1 tsp turmeric
+- target: garam_masala
+  options:
+  - components:
+    - ground_cumin
+    - ground_coriander
+    - cardamom
+    - cinnamon
+    - ground_cloves
+    - ground_nutmeg
+    cost: 0.2
+    note: 1 tsp garam_masala = 1/2 tsp ground_cumin + 1/4 tsp ground_coriander + 1/4 tsp cardamom + pinch
+      each cinnamon, ground_cloves, ground_nutmeg
+- target: five_spice
+  options:
+  - components:
+    - star_anise
+    - cinnamon
+    - ground_cloves
+    - ground_fennel
+    - sichuan_peppercorn
+    cost: 0.15
+    note: equal parts ground star_anise, cinnamon, ground_cloves, ground_fennel, sichuan_peppercorn
+  - components:
+    - star_anise
+    - cinnamon
+    - ground_cloves
+    cost: 0.35
+    note: 'simplified: 2 parts star_anise + 2 parts cinnamon + 1 part ground_cloves (missing fennel-pepper
+      layers)'
+- target: dashi
+  options:
+  - components:
+    - kombu
+    - dried_shiitake
+    - water
+    cost: 0.25
+    note: 'vegan dashi: simmer 1 piece kombu + 3 dried_shiitake in 4 cups water 20 min; clean umami minus
+      the smoky bonito note'
+  - components:
+    - soy_sauce
+    - water
+    cost: 0.55
+    note: 'quick stand-in: 1 cup dashi = 1 cup water + 1 tsp soy_sauce (flat, lacks marine umami; use
+      only in a pinch)'
+- target: rice_wine
+  options:
+  - components:
+    - rice_vinegar
+    - water
+    - sugar
+    cost: 0.5
+    note: 'non-alcoholic: 1 tbsp rice_wine = 2 tsp water + 1 tsp rice_vinegar + pinch sugar'
+- target: black_vinegar
+  options:
+  - components:
+    - rice_vinegar
+    - sugar
+    cost: 0.35
+    note: 1 tbsp black vinegar = 1 tbsp rice_vinegar + 1/4 tsp sugar (brighter, less malty depth)
+  - components:
+    - balsamic_vinegar
+    - rice_vinegar
+    cost: 0.3
+    note: 1 tbsp black vinegar = 2 tsp balsamic_vinegar + 1 tsp rice_vinegar (closest for dark, slightly
+      sweet maltiness)
+- target: sweet_chili_sauce
+  options:
+  - components:
+    - sriracha
+    - sugar
+    - white_vinegar
+    - water
+    cost: 0.3
+    note: 1/4 cup sweet chili sauce = 2 tbsp sugar + 2 tbsp water + 1 tbsp white_vinegar + 1 tbsp sriracha,
+      simmered to syrup
+  - components:
+    - red_pepper_flakes
+    - sugar
+    - white_vinegar
+    - fresh_garlic
+    - water
+    cost: 0.35
+    note: simmer 2 tbsp sugar + 2 tbsp water + 1 tbsp white_vinegar + 1 tsp red_pepper_flakes + 1 clove
+      fresh_garlic until syrupy
+- target: chickpeas
+  options:
+  - components:
+    - cannellini_beans
+    cost: 0.2
+    note: 1 cup cooked chickpeas = 1 cup cooked cannellini beans; milder and creamier, holds shape in
+      salads and stews
+  - components:
+    - great_northern_beans
+    cost: 0.25
+    note: 1 cup cooked chickpeas = 1 cup cooked great northern beans; softer texture, slightly less nutty
+  - components:
+    - navy_beans
+    cost: 0.3
+    note: 1 cup cooked chickpeas = 1 cup cooked navy beans; smaller and softer, best in mashed or blended
+      uses
+- target: black_beans
+  options:
+  - components:
+    - pinto_beans
+    cost: 0.2
+    note: 1 cup cooked black beans = 1 cup cooked pinto beans; creamier and milder, great in chili and
+      burritos
+  - components:
+    - kidney_beans
+    cost: 0.3
+    note: 1 cup cooked black beans = 1 cup cooked kidney beans; firmer with a meatier bite
+- target: brown_lentils
+  options:
+  - components:
+    - green_lentils
+    cost: 0.15
+    note: 1 cup brown lentils = 1 cup green lentils; hold shape slightly better, good for soups and salads
+  - components:
+    - red_lentils
+    cost: 0.5
+    note: 1 cup brown lentils = 1 cup red lentils but they break down into mush; use only for purees,
+      dals, or thickening soups
+  - components:
+    - split_peas
+    cost: 0.45
+    note: 1 cup brown lentils = 1 cup split peas; cook softer and sweeter, best for soups not where shape
+      matters
+- target: firm_tofu
+  options:
+  - components:
+    - extra_firm_tofu
+    cost: 0.15
+    note: swap 1:1; press less since it holds shape better, ideal for stir-fry and grilling
+  - components:
+    - tempeh
+    cost: 0.4
+    note: swap by weight 1:1; nuttier and denser, steam 10 min first to soften bitterness
+- target: silken_tofu
+  options:
+  - components:
+    - firm_tofu
+    - water
+    cost: 0.4
+    note: for blended sauces/smoothies, blend 1 cup firm tofu + 2 tbsp water per 1 cup silken; slightly
+      less custardy
+  - components:
+    - plain_yogurt
+    cost: 0.5
+    note: in creamy dressings or dips, 1 cup silken tofu = 1 cup plain yogurt; adds tang, not vegan
+- target: tempeh
+  options:
+  - components:
+    - extra_firm_tofu
+    cost: 0.35
+    note: swap by weight 1:1; less nutty and less firm, press and marinate well for best results
+  - components:
+    - seitan
+    cost: 0.45
+    note: swap by weight 1:1; chewier and meatier, not gluten-free
+- target: seitan
+  options:
+  - components:
+    - extra_firm_tofu
+    cost: 0.5
+    note: swap by weight 1:1; far less chewy, press and bake or fry for a firmer bite, but gluten-free
+  - components:
+    - tempeh
+    cost: 0.45
+    note: swap by weight 1:1; denser and nuttier with a grainier texture, gluten-free
+- target: plant_crumbles
+  options:
+  - components:
+    - ground_beef
+    cost: 0.4
+    note: swap 1:1 by weight; the original meat version, drain excess fat after browning; not vegetarian
+  - components:
+    - textured_vegetable_protein
+    - water
+    cost: 0.35
+    note: rehydrate 1 cup dry TVP in 7/8 cup hot water for ~1 cup crumbles; season aggressively as TVP
+      is bland
+  - components:
+    - tempeh
+    cost: 0.45
+    note: crumble or grate 1 cup worth of tempeh; firmer, nuttier, brown well in oil
+- target: ground_beef
+  options:
+  - components:
+    - plant_crumbles
+    cost: 0.4
+    note: swap 1:1 by weight; leaner so add 1 tbsp oil per cup, vegan and ready without draining
+  - components:
+    - textured_vegetable_protein
+    - water
+    - soy_sauce
+    cost: 0.45
+    note: rehydrate 1 cup dry TVP in 7/8 cup hot water + 1 tbsp soy sauce per 1 cup beef; season heavily
+- target: flax_egg
+  options:
+  - components:
+    - ground_flaxseed
+    - water
+    cost: 0.3
+    note: 1 egg = 1 tbsp ground flaxseed + 3 tbsp water, rest 5-10 min until gelled; binds in burgers,
+      loaves and baking, no leavening
+- target: textured_vegetable_protein
+  options:
+  - components:
+    - tempeh
+    cost: 0.4
+    note: 1 cup rehydrated TVP = ~1 cup crumbled tempeh; nuttier and firmer, brown in oil
+  - components:
+    - plant_crumbles
+    cost: 0.3
+    note: 1 cup rehydrated TVP = ~1 cup plant crumbles; pre-seasoned and softer, no soaking needed
+- target: lemon_extract
+  options:
+  - components:
+    - lemon_zest
+    cost: 0.2
+    note: 1 tsp lemon extract = 2 tsp fresh lemon zest
+  - components:
+    - lemon_juice
+    cost: 0.4
+    note: 1 tsp lemon extract = 2 tbsp lemon juice; reduce other liquid by 2 tbsp; milder flavor
+- target: mayonnaise
+  options:
+  - components:
+    - plain_yogurt
+    cost: 0.4
+    note: 1 cup mayonnaise = 1 cup plain yogurt; tangier and thinner
+  - components:
+    - sour_cream
+    cost: 0.4
+    note: 1 cup mayonnaise = 1 cup sour cream; works best in dressings and dips
+- target: whole_grain_mustard
+  options:
+  - components:
+    - dijon_mustard
+    cost: 0.2
+    note: 1 tbsp whole grain mustard = 1 tbsp dijon mustard; smoother, slightly sharper
+  - components:
+    - mustard_powder
+    - water
+    - white_vinegar
+    cost: 0.4
+    note: 1 tbsp whole grain mustard = 1 tsp mustard powder + 1 tsp water + 1 tsp vinegar; lacks seed
+      texture
+- target: english_mustard
+  options:
+  - components:
+    - mustard_powder
+    - water
+    cost: 0.2
+    note: 1 tsp english mustard = 1 tsp mustard powder + 1 tsp water; rest 10 min to develop heat
+  - components:
+    - dijon_mustard
+    cost: 0.4
+    note: 1 tsp english mustard = 1 tsp dijon mustard; less hot, more acidic
+- target: mustard_powder
+  options:
+  - components:
+    - dijon_mustard
+    cost: 0.3
+    note: 1 tsp mustard powder = 1 tbsp dijon mustard; reduce other liquid by ~2 tsp
+  - components:
+    - yellow_mustard
+    cost: 0.4
+    note: 1 tsp mustard powder = 1 tbsp yellow mustard; milder and more vinegary
+- target: relish
+  options:
+  - components:
+    - dill_pickles
+    - sugar
+    cost: 0.2
+    note: 1/4 cup relish = 1/4 cup finely chopped dill pickles + 1/2 tsp sugar
+- target: capers
+  options:
+  - components:
+    - green_olives
+    cost: 0.3
+    note: 1 tbsp capers = 1 tbsp chopped brined green olives; briny but less sharp
+  - components:
+    - dill_pickles
+    cost: 0.5
+    note: 1 tbsp capers = 1 tbsp finely chopped dill pickles; tangy substitute, missing floral note
+- target: anchovy_paste
+  options:
+  - components:
+    - anchovy_fillets
+    cost: 0.1
+    note: 1 tsp anchovy paste = 1 mashed anchovy fillet
+  - components:
+    - fish_sauce
+    cost: 0.3
+    note: 1 tsp anchovy paste = 1/2 tsp fish sauce; thinner, saltier
+  - components:
+    - worcestershire_sauce
+    cost: 0.5
+    note: 1 tsp anchovy paste = 1 tsp worcestershire sauce; milder umami
+- target: white_miso
+  options:
+  - components:
+    - soy_sauce
+    cost: 0.5
+    note: 1 tbsp white miso = 1 tbsp soy sauce; saltier and thinner, lacks fermented depth
+- target: nutritional_yeast
+  options:
+  - components:
+    - white_miso
+    cost: 0.5
+    note: 1 tbsp nutritional yeast = 2 tsp white miso for savory umami; not for dry coatings
+- target: lemon_zest
+  options:
+  - components:
+    - lemon_juice
+    cost: 0.4
+    note: 1 tsp lemon zest = 2 tbsp lemon juice; adds acidity but less aromatic oil
+  - components:
+    - lemon_extract
+    cost: 0.3
+    note: 1 tsp lemon zest = 1/2 tsp lemon extract; concentrated flavor without texture
+- target: orange_zest
+  options:
+  - components:
+    - orange_juice
+    cost: 0.4
+    note: 1 tsp orange zest = 2 tbsp orange juice; reduce other liquid; milder
+  - components:
+    - lemon_zest
+    cost: 0.5
+    note: 1 tsp orange zest = 1 tsp lemon zest; different citrus, brighter and tarter
+- target: espresso_powder
+  options:
+  - components:
+    - instant_coffee
+    cost: 0.2
+    note: 1 tsp espresso powder = 2 tsp instant coffee (less concentrated, slightly less deep flavor)
+  - components:
+    - brewed_coffee
+    cost: 0.4
+    note: 1 tsp espresso powder = 1 to 2 tbsp very strong brewed coffee; reduce other liquid in recipe
+      to compensate
+- target: brewed_coffee
+  options:
+  - components:
+    - instant_coffee
+    - water
+    cost: 0.1
+    note: 1 cup brewed coffee = 1 to 2 tsp instant coffee dissolved in 1 cup hot water
+  - components:
+    - espresso_powder
+    - water
+    cost: 0.15
+    note: 1 cup brewed coffee = 1 tsp espresso powder in 1 cup hot water (stronger, more roasted)
+- target: brewed_tea
+  options:
+  - components:
+    - black_tea_bag
+    - water
+    cost: 0.05
+    note: 1 cup brewed tea = 1 tea bag steeped in 1 cup hot water 3 to 5 min
+  - components:
+    - water
+    cost: 0.6
+    note: for braising liquid only, 1 cup tea = 1 cup water; loses tannin and aroma, last resort
+- target: coconut_water
+  options:
+  - components:
+    - water
+    cost: 0.5
+    note: in cooking/braising, 1 cup coconut water = 1 cup water; loses subtle sweetness
+- target: chicken_stock
+  options:
+  - components:
+    - vegetable_stock_concentrate
+    - water
+    cost: 0.3
+    note: 1 cup stock = 1 tsp concentrate in 1 cup water; stock is bone-based and more gelatinous, this
+      is lighter
+  - components:
+    - water
+    - salt
+    cost: 0.6
+    note: 1 cup stock = 1 cup water + 1/4 tsp salt; loses body and savor, last resort
+- target: vegetable_stock_concentrate
+  options:
+  - components:
+    - vegetable_broth
+    cost: 0.2
+    note: 1 tsp concentrate + 1 cup water = 1 cup vegetable broth; use ready broth straight in place of
+      reconstituted concentrate
+- target: beer
+  options:
+  - components:
+    - chicken_stock
+    cost: 0.4
+    note: 1 cup beer = 1 cup stock in braises/stews; loses malt bitterness and carbonation lift
+  - components:
+    - ginger_ale
+    cost: 0.45
+    note: 1 cup beer = 1 cup ginger ale for batters needing fizz and slight sweetness; not for hoppy savor
+  - components:
+    - apple_juice
+    - water
+    cost: 0.5
+    note: 1 cup beer = 1/2 cup apple juice + 1/2 cup water for pork/sausage braises; sweeter, no bitterness
+- target: white_grape_juice
+  options:
+  - components:
+    - apple_juice
+    cost: 0.2
+    note: 1 cup white grape juice = 1 cup apple juice; similar pale sweetness, slightly more apple-forward
+- target: cranberry_juice
+  options:
+  - components:
+    - pomegranate_juice
+    cost: 0.25
+    note: 1 cup cranberry juice = 1 cup pomegranate juice; matching tart-red profile, slightly deeper/less
+      sharp
+- target: apple_juice
+  options:
+  - components:
+    - white_grape_juice
+    cost: 0.2
+    note: 1 cup apple juice = 1 cup white grape juice; comparable mild sweetness
+  - components:
+    - water
+    - sugar
+    cost: 0.4
+    note: 1 cup apple juice = 1 cup water + 2 tbsp sugar; adds sweetness, loses fruit aroma
+- target: orange_juice
+  options:
+  - components:
+    - pomegranate_juice
+    cost: 0.55
+    note: 1 cup orange juice = 1 cup pomegranate juice in glazes/marinades; different fruit, similar sweet-tart
+      acidity
+- target: sweetened_flaked_coconut
+  options:
+  - components:
+    - unsweetened_shredded_coconut
+    - sugar
+    cost: 0.2
+    note: 1 cup sweetened flaked = 1 cup unsweetened shredded + 2 tbsp sugar (toss; texture slightly finer)
+  - components:
+    - unsweetened_shredded_coconut
+    - maple_syrup
+    cost: 0.3
+    note: 1 cup sweetened flaked = 1 cup unsweetened shredded tossed with 1 tbsp maple syrup, dried briefly
+- target: marshmallow
+  options:
+  - components:
+    - marshmallow_creme
+    cost: 0.2
+    note: for melting recipes, 1 cup mini marshmallows = about 1 cup (7 oz) marshmallow creme; not for
+      whole-shape uses
+- target: graham_cracker_crumbs
+  options:
+  - components:
+    - digestive_biscuit_crumbs
+    cost: 0.1
+    note: 1 cup graham crumbs = 1 cup digestive biscuit crumbs (slightly less sweet, near-identical for
+      crusts)
+  - components:
+    - vanilla_wafer_crumbs
+    cost: 0.3
+    note: 1 cup graham crumbs = 1 cup vanilla wafer crumbs (sweeter, no honey note)
+- target: chocolate_syrup
+  options:
+  - components:
+    - cocoa_powder
+    - sugar
+    - water
+    cost: 0.3
+    note: 1/2 cup syrup = 1/4 cup cocoa + 1/2 cup sugar + 1/4 cup water, simmered to dissolve then cooled
+- target: candied_ginger
+  options:
+  - components:
+    - ground_ginger
+    - sugar
+    cost: 0.5
+    note: 'flavor only: 1 tbsp chopped candied ginger = 1/4 tsp ground ginger + 1 tsp sugar; loses chew'
+- target: date_syrup
+  options:
+  - components:
+    - maple_syrup
+    cost: 0.3
+    note: 1:1 by volume; maple is thinner and less caramel-malty
+  - components:
+    - pitted_dates
+    - water
+    cost: 0.2
+    note: blend 1 cup pitted dates with ~3/4 cup hot water and strain to make ~1 cup date syrup
+- target: date_paste
+  options:
+  - components:
+    - pitted_dates
+    - water
+    cost: 0.1
+    note: soak 1 cup pitted dates in warm water 30 min, drain, blend with 2-3 tbsp water = ~3/4 cup date
+      paste
+- target: powdered_milk
+  options:
+  - components:
+    - milk
+    cost: 0.4
+    note: 'reconstituted use only: 3 tbsp powdered milk + 1 cup water = 1 cup milk; cannot replace dry
+      powder in dry mixes'
+- target: smoked_paprika
+  options:
+  - components:
+    - paprika
+    cost: 0.3
+    note: 1 tsp smoked paprika = 1 tsp regular paprika; loses the smoky note but keeps color and mild
+      pepper flavor
+- target: turmeric
+  options:
+  - components:
+    - ground_ginger
+    - paprika
+    cost: 0.5
+    note: 1 tsp turmeric = 1/2 tsp ground ginger + 1/2 tsp paprika; mainly for color and warmth, lacks
+      the bitter earthiness
+- target: ground_coriander
+  options:
+  - components:
+    - coriander_seed
+    cost: 0.1
+    note: 1 tsp ground coriander = 1 tsp coriander seeds, toasted and finely ground
+- target: coriander_seed
+  options:
+  - components:
+    - ground_coriander
+    cost: 0.2
+    note: 1 tsp coriander seeds = 3/4 tsp ground coriander; fine for flavor but you lose the whole-seed
+      texture and pop
+- target: celery_salt
+  options:
+  - components:
+    - celery_seed
+    - salt
+    cost: 0.05
+    note: 1 tsp celery salt = 1/2 tsp ground celery seed + 1/2 tsp salt
+- target: old_bay
+  options:
+  - components:
+    - cajun_seasoning
+    - celery_salt
+    cost: 0.4
+    note: 1 tbsp Old Bay = 2 tsp Cajun seasoning + 1 tsp celery salt; spicier, less of the signature celery
+      note
+- target: herbes_de_provence
+  options:
+  - components:
+    - dried_thyme
+    - dried_rosemary
+    - dried_oregano
+    - dried_savory
+    - dried_marjoram
+    cost: 0.1
+    note: 1 tbsp herbes de Provence = 1 tsp thyme + 1 tsp rosemary + 1 tsp oregano + pinch savory + pinch
+      marjoram
+  - components:
+    - dried_thyme
+    - dried_rosemary
+    cost: 0.4
+    note: 1 tbsp herbes de Provence = 2 tsp thyme + 1 tsp rosemary; simplest two-herb stand-in
+- target: za_atar
+  options:
+  - components:
+    - dried_thyme
+    - toasted_sesame_seeds
+    - sumac
+    - salt
+    cost: 0.15
+    note: 2 tbsp za'atar = 1 tbsp thyme + 2 tsp toasted sesame seeds + 2 tsp sumac + 1/4 tsp salt
+  - components:
+    - dried_oregano
+    - toasted_sesame_seeds
+    - lemon_juice
+    - salt
+    cost: 0.5
+    note: 2 tbsp za'atar = 1 tbsp oregano + 2 tsp sesame seeds + 1 tsp lemon juice + salt; lemon mimics
+      sumac's tang
+- target: sumac
+  options:
+  - components:
+    - lemon_juice
+    cost: 0.4
+    note: 1 tsp sumac = 2 tsp lemon juice for the tartness; adds moisture so reduce other liquids
+  - components:
+    - lemon_juice
+    - paprika
+    cost: 0.45
+    note: 1 tsp sumac = 1 tsp lemon juice + 1/2 tsp paprika to mimic both the tang and red color
+- target: mustard_seed
+  options:
+  - components:
+    - ground_mustard
+    cost: 0.3
+    note: 1 tbsp mustard seeds = 1 tbsp ground mustard for flavor; loses the whole-seed texture in pickles
+- target: ground_mustard
+  options:
+  - components:
+    - mustard_seed
+    cost: 0.2
+    note: 1 tsp ground mustard = 1 tsp mustard seeds, finely ground
