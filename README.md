@@ -7,7 +7,7 @@
 [![CI](https://github.com/HarryXin0919/pantrypath/actions/workflows/ci.yml/badge.svg)](https://github.com/HarryXin0919/pantrypath/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-![Tests](https://img.shields.io/badge/tests-40%20passed-success)
+![Tests](https://img.shields.io/badge/tests-51%20passed-success)
 
 Out of one ingredient? Don't ditch the dish. PantryPath models ingredient
 substitution as a **shortest-path / shortest-hyperpath** problem and, given what
@@ -141,6 +141,24 @@ Dijkstra** fires a rule once all its components are settled (cost = rule cost + 
 component costs), then backtracks into a substitution tree. Full formalization in
 [`docs/DESIGN.md`](./docs/DESIGN.md).
 
+```mermaid
+flowchart LR
+    pm["powdered_milk<br/>have · 0"] --> R2(("rule<br/>+0.05"))
+    w["water<br/>have · 0"] --> R2
+    R2 --> milk["milk"]
+    milk --> R1(("rule · AND<br/>+0.15"))
+    v["white_vinegar<br/>have · 0"] --> R1
+    R1 --> bm["buttermilk ✓"]
+    classDef have fill:#e7f5ec,stroke:#34a853;
+    classDef goal fill:#fff4e5,stroke:#f59e0b;
+    class pm,w,v have;
+    class bm goal;
+```
+
+*Compound (AND) + multi-hop in one picture: `powdered_milk + water → milk`, then
+`milk + white_vinegar → buttermilk`, accumulating cost hop by hop. Output is bilingual
+(中文 / English).*
+
 ## Knowledge base
 
 Ships **310 ingredients · 225 targets · 449 substitution rules** (corrected against
@@ -161,7 +179,7 @@ substitutions:
 ## Tests
 
 ```bash
-pytest -q     # 40 passed
+pytest -q     # 51 passed
 ```
 
 ## Design & related work

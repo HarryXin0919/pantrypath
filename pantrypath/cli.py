@@ -18,6 +18,7 @@ import argparse
 import sys
 from pathlib import Path
 
+from . import __version__
 from .graph import default_data_path, load_graph
 from .recipe import RecipeReport, analyze_recipe
 from .solver import SubstitutionResult, solve, solve_topk
@@ -31,14 +32,14 @@ def _render_tree(node: dict, prefix: str = "", is_last: bool = True) -> list[str
     connector = "└─ " if is_last else "├─ "
     label = node["ingredient"]
     if node.get("have"):
-        line = f"{prefix}{connector}{label}  ✅ 已有"
+        line = f"{prefix}{connector}{label}  ✅ 已有 / have"
     elif node.get("via"):
         via = node["via"]
-        line = f"{prefix}{connector}{label}  ⇐ 用 {' + '.join(via['components'])}  (成本 {via['cost']:.2f})"
+        line = f"{prefix}{connector}{label}  ⇐ 用 / via {' + '.join(via['components'])}  (成本 / cost {via['cost']:.2f})"
         if via.get("note"):
             line += f"\n{prefix}{'   ' if is_last else '│  '}      · {via['note']}"
     else:
-        line = f"{prefix}{connector}{label}  ❌ 无方案"
+        line = f"{prefix}{connector}{label}  ❌ 无方案 / no plan"
     lines = [line]
     children = node.get("children", [])
     child_prefix = prefix + ("   " if is_last else "│  ")
@@ -49,15 +50,16 @@ def _render_tree(node: dict, prefix: str = "", is_last: bool = True) -> list[str
 
 def format_result(res: SubstitutionResult) -> str:
     if not res.found:
-        return f"❌ 找不到「{res.target}」的替代方案（用现有食材无法还原）。"
+        return (f"❌ 找不到「{res.target}」的替代方案 / no substitution found for {res.target} "
+                f"(用现有食材无法还原 / can't reconstruct it from your pantry)。")
     if not res.steps:
-        return f"✅ 你已经有「{res.target}」了，无需替代。"
+        return f"✅ 你已经有「{res.target}」了，无需替代 / already have {res.target}, no substitution needed。"
     out = [
-        f"🍳 目标食材：{res.target}",
-        f"   总还原成本：{res.total_cost:.2f}   ≈ 口味保真度 {res.quality_retained:.0f}%",
-        f"   实际使用：{', '.join(res.leaves())}",
+        f"🍳 目标食材 / target：{res.target}",
+        f"   总还原成本 / total cost：{res.total_cost:.2f}   ≈ 口味保真度 / fidelity {res.quality_retained:.0f}%",
+        f"   实际使用 / uses：{', '.join(res.leaves())}",
         "",
-        "替代方案：",
+        "替代方案 / plan：",
     ]
     out += _render_tree(res.tree)
     return "\n".join(out)
@@ -66,15 +68,15 @@ def format_result(res: SubstitutionResult) -> str:
 def format_topk(target: str, results: list[SubstitutionResult]) -> str:
     """Render several ranked alternatives for one target, side by side."""
     if not results:
-        return f"❌ 找不到「{target}」的替代方案（用现有食材无法还原）。"
+        return f"❌ 找不到「{target}」的替代方案 / no substitution found for {target}。"
     if len(results) == 1 and not results[0].steps:
-        return f"✅ 你已经有「{target}」了，无需替代。"
-    out = [f"🍳 目标食材：{target} —— {len(results)} 个备选方案（按还原度排序）"]
+        return f"✅ 你已经有「{target}」了 / already have {target}，无需替代。"
+    out = [f"🍳 目标食材 / target：{target} —— {len(results)} 个备选方案 / alternatives（按还原度排序 / ranked by fidelity）"]
     for i, res in enumerate(results, 1):
-        tag = "最省" if i == 1 else f"备选{i}"
+        tag = "最省 / best" if i == 1 else f"备选{i} / alt {i}"
         out.append("")
-        out.append(f"【{tag}】成本 {res.total_cost:.2f}  ≈ 保真度 {res.quality_retained:.0f}%"
-                   f"  · 用 {', '.join(res.leaves())}")
+        out.append(f"【{tag}】成本 / cost {res.total_cost:.2f}  ≈ 保真度 / fidelity {res.quality_retained:.0f}%"
+                   f"  · 用 / uses {', '.join(res.leaves())}")
         out += _render_tree(res.tree)
     return "\n".join(out)
 
@@ -82,19 +84,21 @@ def format_topk(target: str, results: list[SubstitutionResult]) -> str:
 def format_recipe_report(report: RecipeReport) -> str:
     """Human-readable summary of a whole-recipe analysis."""
     out: list[str] = []
-    out.append("📋 菜谱解析结果")
-    out.append(f"   识别到 {len([p for p in report.parsed if p.ingredient])} 种食材"
-               f"（共 {len(report.parsed)} 行）")
+    out.append("📋 菜谱解析结果 / recipe parse")
+    out.append(f"   识别到 / recognized {len([p for p in report.parsed if p.ingredient])} 种食材 / ingredients"
+               f"（共 / of {len(report.parsed)} 行 / lines）")
     if report.have:
-        out.append(f"   ✅ 已有：{', '.join(report.have)}")
+        out.append(f"   ✅ 已有 / have：{', '.join(report.have)}")
     if report.unmatched:
-        out.append(f"   ❓ 未识别（不在知识库里，已跳过）：{'; '.join(report.unmatched)}")
+        out.append(f"   ❓ 未识别 / unrecognized（不在知识库,已跳过 / not in KB, skipped）：{'; '.join(report.unmatched)}")
     n_missing = len(report.missing)
     n_solved = len(report.solvable)
-    out.append(f"   🔍 缺料 {n_missing} 种，其中 {n_solved} 种可替代，{n_missing - n_solved} 种暂无方案")
+    out.append(f"   🔍 缺料 / missing {n_missing} 种，其中 {n_solved} 种可替代 / substitutable，"
+               f"{n_missing - n_solved} 种暂无方案 / no plan")
 
     if not report.missing:
-        out.append("\n🎉 你的食材已覆盖整张配料表，无需替代！")
+        out.append("\n🎉 你的食材已覆盖整张配料表，无需替代！"
+                   " / your pantry already covers the whole list — nothing to substitute!")
         return "\n".join(out)
 
     out.append("\n" + "=" * 56)
@@ -151,6 +155,7 @@ def build_parser() -> argparse.ArgumentParser:
         prog="pantrypath",
         description="把缺料救场建模成最短路径：给定你有的食材，找还原度最高的替代链。",
     )
+    ap.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     # Top-level --need/--have keeps the original single-/multi-ingredient mode
     # working unchanged (backward compatible).
     ap.add_argument("--need", help="缺少的食材，逗号分隔（如 buttermilk 或 cake_flour,buttermilk）")
