@@ -2,10 +2,12 @@
 
 __version__ = "0.1.1"
 
-from .graph import SubstitutionGraph, load_graph, load_default_graph, default_data_path
+from .graph import (
+    SubstitutionGraph, load_graph, load_default_graph, default_data_path, InvalidSpecError,
+)
 from .solver import solve, solve_topk, SubstitutionResult
 
 __all__ = [
     "SubstitutionGraph", "load_graph", "load_default_graph", "default_data_path",
-    "solve", "solve_topk", "SubstitutionResult",
+    "InvalidSpecError", "solve", "solve_topk", "SubstitutionResult",
 ]

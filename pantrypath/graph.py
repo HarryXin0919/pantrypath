@@ -54,27 +54,75 @@ def _ensure_ingredient(G: nx.DiGraph, name: str) -> None:
         G.add_node(name, kind="ingredient")
 
 
+class InvalidSpecError(ValueError):
+    """Raised when a substitutions spec (YAML/dict) is malformed.
+
+    The message always points at the offending entry so contributors editing
+    ``substitutions.yaml`` get an actionable error instead of a raw KeyError.
+    """
+
+
+def _check(cond: bool, msg: str) -> None:
+    if not cond:
+        raise InvalidSpecError(msg)
+
+
 def build_graph(spec: dict) -> SubstitutionGraph:
-    """Build a SubstitutionGraph from a parsed YAML/dict spec."""
+    """Build a SubstitutionGraph from a parsed YAML/dict spec.
+
+    Validates the spec and raises :class:`InvalidSpecError` with a precise,
+    contributor-friendly message on any malformed entry (the data is meant to
+    be hand-edited, so a clear error beats a cryptic ``KeyError``).
+    """
+    _check(isinstance(spec, dict),
+           "substitution spec is empty or not a mapping "
+           "(expected top-level 'ingredients' and/or 'substitutions')")
     G = nx.DiGraph()
     tags: Dict[str, set] = {}
 
     # 1) ingredient nodes + dietary tags
-    for name, meta in (spec.get("ingredients") or {}).items():
+    ingredients = spec.get("ingredients") or {}
+    _check(isinstance(ingredients, dict), "'ingredients' must be a mapping of name -> metadata")
+    for name, meta in ingredients.items():
         _ensure_ingredient(G, name)
         meta = meta or {}
-        tags[name] = set(meta.get("tags", []))
+        _check(isinstance(meta, dict), f"ingredient {name!r}: metadata must be a mapping")
+        tags[name] = set(meta.get("tags", []) or [])
         G.nodes[name].update(category=meta.get("category"))
 
     # 2) substitution rules -> rule nodes
+    subs = spec.get("substitutions") or []
+    _check(isinstance(subs, list), "'substitutions' must be a list")
     rule_id = 0
-    for entry in spec.get("substitutions") or []:
-        target = entry["target"]
+    for i, entry in enumerate(subs):
+        _check(isinstance(entry, dict),
+               f"substitutions[{i}]: each entry must be a mapping with 'target' and 'options'")
+        target = entry.get("target")
+        _check(isinstance(target, str) and target.strip(),
+               f"substitutions[{i}]: missing or empty 'target'")
+        where = f"substitution for {target!r}"
+        options = entry.get("options")
+        _check(isinstance(options, list) and options, f"{where}: 'options' must be a non-empty list")
         _ensure_ingredient(G, target)
-        for opt in entry["options"]:
-            components = list(opt["components"])
-            cost = float(opt["cost"])
-            note = opt.get("note", "")
+        for j, opt in enumerate(options):
+            _check(isinstance(opt, dict), f"{where} option[{j}]: must be a mapping")
+            raw_comps = opt.get("components")
+            _check(isinstance(raw_comps, list) and raw_comps,
+                   f"{where} option[{j}]: 'components' must be a non-empty list")
+            _check(all(isinstance(c, str) and c.strip() for c in raw_comps),
+                   f"{where} option[{j}]: every component must be a non-empty string")
+            # Dedupe (preserve order): a rule listing the same component twice
+            # would otherwise never fire — the AND-counter expects exactly one
+            # settle per distinct component (one collapsed edge in the DiGraph).
+            components = list(dict.fromkeys(raw_comps))
+            try:
+                cost = float(opt["cost"])
+            except (KeyError, TypeError, ValueError):
+                raise InvalidSpecError(f"{where} option[{j}]: 'cost' must be a number") from None
+            _check(cost >= 0,
+                   f"{where} option[{j}]: 'cost' must be >= 0 "
+                   "(the solver is Dijkstra, which needs non-negative weights)")
+            note = opt.get("note", "") or ""
             rnode = f"__rule_{rule_id}__"
             rule_id += 1
             G.add_node(
@@ -99,9 +147,17 @@ def build_graph(spec: dict) -> SubstitutionGraph:
 
 
 def load_graph(path: str | Path) -> SubstitutionGraph:
-    """Load a substitution graph from a YAML file."""
-    with open(path, "r", encoding="utf-8") as fh:
-        spec = yaml.safe_load(fh)
+    """Load a substitution graph from a YAML file (clear errors on bad input)."""
+    path = Path(path)
+    try:
+        with open(path, "r", encoding="utf-8") as fh:
+            spec = yaml.safe_load(fh)
+    except FileNotFoundError:
+        raise InvalidSpecError(f"substitutions file not found: {path}") from None
+    except yaml.YAMLError as e:
+        raise InvalidSpecError(f"{path}: not valid YAML — {e}") from None
+    if spec is None:
+        raise InvalidSpecError(f"{path}: file is empty")
     return build_graph(spec)
 
 
