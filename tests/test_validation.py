@@ -4,12 +4,21 @@ These cover the contributor-facing robustness work: editing substitutions.yaml
 should fail with a precise message, not a cryptic KeyError/AttributeError.
 """
 
+import tomllib
+from pathlib import Path
+
 import pytest
 
 import pantrypath
 from pantrypath.cli import main
 from pantrypath.graph import InvalidSpecError, build_graph, load_graph
 from pantrypath.solver import solve
+
+
+def _pyproject_version() -> str:
+    pyproject = Path(__file__).resolve().parent.parent / "pyproject.toml"
+    with pyproject.open("rb") as f:
+        return tomllib.load(f)["project"]["version"]
 
 
 # ----------------------------- spec validation -----------------------------
@@ -77,12 +86,19 @@ def test_duplicate_components_deduped_and_solvable():
 
 
 # ----------------------------- CLI: --version & bilingual -----------------------------
+def test_version_matches_pyproject():
+    """__version__ must track pyproject's [project].version — the single source of
+    truth — so the two can never silently drift (caught a stale 0.1.1 once)."""
+    assert pantrypath.__version__ == _pyproject_version()
+
+
 def test_version_flag(capsys):
     with pytest.raises(SystemExit) as exc:
         main(["--version"])
     assert exc.value.code == 0
     out = capsys.readouterr().out
     assert "pantrypath" in out and pantrypath.__version__ in out
+    assert _pyproject_version() in out
 
 
 def test_output_is_bilingual(capsys):

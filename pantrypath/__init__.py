@@ -1,6 +1,11 @@
 """PantryPath: model cooking substitutions as a shortest-path / shortest-hyperpath problem."""
 
-__version__ = "0.1.1"
+from importlib.metadata import version, PackageNotFoundError
+
+try:
+    __version__ = version("pantrypath")
+except PackageNotFoundError:
+    __version__ = "0.2.0"
 
 from .graph import (
     SubstitutionGraph, load_graph, load_default_graph, default_data_path, InvalidSpecError,
