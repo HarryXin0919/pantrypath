@@ -4,6 +4,13 @@ All notable changes to this project are documented here. The format is based on
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1] - 2026-06-13
+
+### Fixed
+- `--version` now reports the correct release. `__version__` is derived from
+  installed package metadata instead of a hardcoded constant that had drifted to
+  0.1.1; a new test asserts it matches `pyproject.toml` so they cannot drift again.
+
 ## [0.2.0] - 2026-06-13
 
 ### Added

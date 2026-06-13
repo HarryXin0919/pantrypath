@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pantrypath"
-version = "0.2.0"
+version = "0.2.1"
 description = "Find the cheapest substitution chain when you're out of an ingredient, by modeling cooking substitutions as a shortest-hyperpath problem."
 readme = "README.md"
 requires-python = ">=3.10"
