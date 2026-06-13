@@ -4,7 +4,7 @@ These cover the contributor-facing robustness work: editing substitutions.yaml
 should fail with a precise message, not a cryptic KeyError/AttributeError.
 """
 
-import tomllib
+import re
 from pathlib import Path
 
 import pytest
@@ -16,9 +16,12 @@ from pantrypath.solver import solve
 
 
 def _pyproject_version() -> str:
+    # Regex (not tomllib) so the test also runs on Python 3.10, which CI targets.
     pyproject = Path(__file__).resolve().parent.parent / "pyproject.toml"
-    with pyproject.open("rb") as f:
-        return tomllib.load(f)["project"]["version"]
+    text = pyproject.read_text(encoding="utf-8")
+    m = re.search(r'(?m)^version\s*=\s*"([^"]+)"', text)
+    assert m, "version not found in pyproject.toml"
+    return m.group(1)
 
 
 # ----------------------------- spec validation -----------------------------
