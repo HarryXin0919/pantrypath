@@ -7,7 +7,7 @@
 [![CI](https://github.com/HarryXin0919/pantrypath/actions/workflows/ci.yml/badge.svg)](https://github.com/HarryXin0919/pantrypath/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-![Tests](https://img.shields.io/badge/tests-51%20passed-success)
+![Tests](https://img.shields.io/badge/tests-53%20passed-success)
 
 Out of one ingredient? Don't ditch the dish. PantryPath models ingredient
 substitution as a **shortest-path / shortest-hyperpath** problem and, given what
@@ -179,7 +179,7 @@ substitutions:
 ## Tests
 
 ```bash
-pytest -q     # 51 passed
+pytest -q     # 53 passed
 ```
 
 ## Design & related work

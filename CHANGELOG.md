@@ -4,13 +4,21 @@ All notable changes to this project are documented here. The format is based on
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.2.0] - 2026-06-13
 
 ### Added
-- GitHub Actions CI running the test suite on Python 3.10–3.12.
+- `--version` flag and bilingual (English / 中文) CLI output.
+- GitHub Actions CI running the test suite on Python 3.10–3.12 across Ubuntu,
+  macOS, and Windows, plus a build + `twine check` job.
 - `CONTRIBUTING.md` (setup, test workflow, how to add a substitution rule) and
   `docs/DESIGN.md` (formal model, cost semantics, prior-art comparison).
 - English-first README with a curated badge row.
+
+### Fixed
+- Hardened spec validation with precise, located error messages for malformed
+  specs (missing target/options/components, negative cost, empty/None spec).
+- De-duplicate repeated components within an AND rule so the rule can actually
+  fire (a rule listing a component twice previously never satisfied its counter).
 
 ### Removed
 - Internal AI-scaffolding files (`CLAUDE.md`, `HANDOFF_PROMPT.md`, `PLAN.md`);
